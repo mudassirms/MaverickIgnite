@@ -5,8 +5,8 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample dataset
 const performanceData = [
-  { Grade: "Grade 10", MrSharma: 72, MsRani: 70, MrPatel: 75, year: "2023", qualification: "M.Ed" },
-  { Grade: "Grade 10", MrSharma: 75, MsRani: 73, MrPatel: 78, year: "2022", qualification: "B.Ed" },
+  { Grade: "Grade 9", MrSharma: 72, MsRani: 70, MrPatel: 75, year: "2023", qualification: "M.Ed" },
+  { Grade: "Grade 8", MrSharma: 75, MsRani: 73, MrPatel: 78, year: "2022", qualification: "B.Ed" },
   { Grade: "Grade 10", MrSharma: 78, MsRani: 76, MrPatel: 80, year: "2023", qualification: "Ph.D" },
   // Add more teachers as needed...
 ];
