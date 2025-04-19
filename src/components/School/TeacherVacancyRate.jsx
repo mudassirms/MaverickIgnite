@@ -24,7 +24,7 @@ const TeacherVacancyRate = ({ year }) => {
       },
     },
     title: {
-      text: `Teacher Vacancy Rate Per Year ${year}`,
+      text: `Teacher Vacancy Rate ${year}`,
       style: { color: "#F9FAFB" },
     },
     xAxis: {
@@ -34,7 +34,7 @@ const TeacherVacancyRate = ({ year }) => {
     },
     yAxis: {
       title: {
-        text: "Vacancy",
+        text: "Number of Vacancy",
         style: { color: "#F9FAFB" },
       },
       labels: { style: { color: "#F9FAFB" } },
@@ -45,12 +45,12 @@ const TeacherVacancyRate = ({ year }) => {
       backgroundColor: "#111827",
       borderColor: "#4B5563",
       style: { color: "#F9FAFB" },
-      pointFormat: "Vacancy: <b>{point.y}%</b>",
+      pointFormat: "Vacancy: <b>{point.y}</b>",
     },
     legend: { enabled: false },
     series: [
       {
-        name: "Vacancy %",
+        name: "Vacancy",
         data: filteredData.map((d) => d.vacancy),
         color: "#FBBF24", // Amber/yellow for attention
       },

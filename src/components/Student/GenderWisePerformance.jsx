@@ -58,9 +58,9 @@ const GenderAvgScoreChart = ({ year, grade }) => {
     },
     title: {
       text: year && grade
-        ? `Avg Score by Gender – ${grade}, ${year}`
+        ? `Avg Score by Gender (${grade}, ${year})`
         : "Overall Avg Score by Gender",
-      style: { color: "#F9FAFB" },
+      style: { color: "#F7FAFB" },
     },
     xAxis: {
       categories: chartData.map((d) => d.name),

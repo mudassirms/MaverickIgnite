@@ -61,7 +61,7 @@ const PerformanceByMotherTongue = ({ year, grade }) => {
     },
     title: {
       text: year && grade
-        ? `Performance by Mother Tongue – ${grade}, ${year}`
+        ? `Performance by Mother Tongue (${grade}, ${year})`
         : "Overall Performance by Mother Tongue",
       style: { color: "#F9FAFB" },
     },

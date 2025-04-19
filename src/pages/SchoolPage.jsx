@@ -7,21 +7,25 @@ import {
   Users,
   Building2,
   DollarSign,
+  ArrowDownCircle, // Icon for Dropout Rate
 } from "lucide-react";
+
 import TotalEnrollment from "../components/School/TotalEnrollment";
 import StudentTeacherRatio from "../components/School/StudentTeacherRatio";
 import SchoolAveragePerformance from "../components/School/SchoolAveragePerformance";
-import DropoutTrend from "../components/School/DropoutTrend";
+// import DropoutTrend from "../components/School/DropoutTrend";
 import InfrastructureScore from "../components/School/InfrastructureScore";
 import TeacherVacancyRate from "../components/School/TeacherVacancyRate";
 import FeeCollectionEfficiency from "../components/School/FeeCollectionEfficiency";
 // import ScholarshipDistribution from "../components/School/ScholarshipDistribution";
+
 
 const totalStats = {
   totalEnrollment: "4,512",
   avgPerformance: "74%",
   infrastructureScore: "81",
   feeEfficiency: "89%",
+  dropoutRate: "6.2%", 
 };
 
 const filteredStats = {
@@ -29,6 +33,7 @@ const filteredStats = {
   avgPerformance: "77%",
   infrastructureScore: "85",
   feeEfficiency: "91%",
+  dropoutRate: "4.8%",  
 };
 
 const SchoolsPage = () => {
@@ -63,7 +68,7 @@ const SchoolsPage = () => {
       <main className="max-w-7xl mx-auto py-6 px-4 lg:px-8">
         {/* Stat Cards */}
         <motion.div
-          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8"
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -92,12 +97,18 @@ const SchoolsPage = () => {
             value={stats.feeEfficiency}
             color="#06B6D4"
           />
+          <StatCard
+            name="Dropout Rate"
+            icon={ArrowDownCircle}
+            value={stats.dropoutRate}
+            color="#EF4444"
+          />
         </motion.div>
 
         {/* Performance Charts */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <TotalEnrollment year={selectedYear} />
-          <DropoutTrend year={selectedYear} />
+          {/* <DropoutTrend year={selectedYear} /> */}
 
           <StudentTeacherRatio year={selectedYear} />
           <SchoolAveragePerformance year={selectedYear} />

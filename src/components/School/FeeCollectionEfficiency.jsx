@@ -70,7 +70,7 @@ const FeeCollectionEfficiency = ({ year }) => {
       {
         name: "Year",
         data: filteredData.map((d) => d.efficiency),
-        color: "#30F899",
+        color: "#b791c9 ",
       },
     ],
     credits: { enabled: false },

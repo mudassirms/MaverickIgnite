@@ -25,7 +25,7 @@ import ExtracurricularActivities from "../components/Student/Extraactivties";
 const totalStats = {
   totalStudents: "1,250",
   avgPerformance: "78.2%",
-  dropoutRate: "4.5%",
+  dropoutRate: "6.2%",
   topPerformers: "125",
 };
 
