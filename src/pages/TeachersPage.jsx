@@ -15,6 +15,8 @@ import AverageTenure from "../components/Teacher/AverageTenure";
 import TeacherAbsenteeismRate from "../components/Teacher/TeacherAbsenteeismRate";
 import TeacherStudentRatio from "../components/Teacher/TeacherStudentRatio";
 import TeacherPerformanceChart from "../components/Teacher/payscale";
+import SalaryVsPerformanceDashlet from "../components/Teacher/TeacherSalaryPerformance";
+import SalaryRangePerformance from "./SalaryRangePerformance";
 
 const teacherStats = [
   { year: "2023", qualification: "B.Ed", total: 80, avgScore: 82, avgTenure: 4.8, subjects: 10 },
@@ -87,35 +89,39 @@ const TeachersPage = () => {
           </select>
         </div>
 
-        {/* CHARTS */}
-     {/* CHARTS */}
-<div className='flex flex-wrap gap-6 justify-start'>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <PerformanceScore year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <PerformanceByQualification year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <PerformanceByClass year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <PerformanceBySubject year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <AverageTenure year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <TeacherAbsenteeismRate year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <TeacherStudentRatio year={selectedYear} qualification={selectedQualification} />
   </div>
-  <div className="w-full md:w-[48%] lg:w-[48%]">
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <TeacherPerformanceChart year={selectedYear} qualification={selectedQualification} />
   </div>
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
+    <SalaryVsPerformanceDashlet year={selectedYear} qualification={selectedQualification} />
+  </div>
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
+    <SalaryRangePerformance />
+  </div>
 </div>
-
+    
       </main>
     </div>
   );
