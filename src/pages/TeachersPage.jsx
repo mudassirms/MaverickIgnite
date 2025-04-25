@@ -17,7 +17,7 @@ import TeacherStudentRatio from "../components/Teacher/TeacherStudentRatio";
 import TeacherPerformanceChart from "../components/Teacher/payscale";
 import SalaryVsPerformanceDashlet from "../components/Teacher/TeacherSalaryPerformance";
 import SalaryRangePerformance from "./SalaryRangePerformance";
-
+import DrilldownChart from "../components/Teacher/teachersalarydrilldown";
 const teacherStats = [
   { year: "2023", qualification: "B.Ed", total: 80, avgScore: 82, avgTenure: 4.8, subjects: 10 },
   { year: "2023", qualification: "M.Ed", total: 60, avgScore: 77, avgTenure: 5.5, subjects: 8 },
@@ -119,6 +119,9 @@ const TeachersPage = () => {
   </div>
   <div className="bg-gray-800 rounded-xl p-4 shadow-md">
     <SalaryRangePerformance />
+  </div>
+  <div className="bg-gray-800 rounded-xl p-4 shadow-md">
+    <DrilldownChart />
   </div>
 </div>
     

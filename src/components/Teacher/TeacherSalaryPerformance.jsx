@@ -6,12 +6,19 @@ import HighchartsReact from "highcharts-react-official";
 const teacherData = [
   { name: "Mr. Sharma", salary: 28000, performance: 72 },
   { name: "Kunaal", salary: 25000, performance: 70 },
+  
   { name: "Karthik", salary: 29000, performance: 82 },
   { name: "Ms. Rani", salary: 34000, performance: 78 },
   { name: "Mr. Patel", salary: 39000, performance: 80 },
   { name: "Mr. Jabbar", salary: 47000, performance: 85 },
   { name: "Mr. Ayaaz", salary: 54000, performance: 88 },
   { name: "Ms. Inayat", salary: 63000, performance: 92 },
+
+
+  { name: "Mr. Haris", salary: 28000, performance: 72 },
+  { name: "Ronak", salary: 25000, performance: 70 },
+  { name: "Kadeer", salary: 29000, performance: 82 },
+  { name: "Ms. Sufi", salary: 34000, performance: 78 },
 ];
 
 const salaryRanges = [
