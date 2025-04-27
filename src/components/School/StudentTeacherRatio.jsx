@@ -4,10 +4,11 @@ import HighchartsReact from "highcharts-react-official";
 
 // Updated data structure with student & teacher counts
 const allRatioData = [
-  { school: "High School", students: 1100, teachers: 50, type: "Private", year: "2025" },
-  { school: "High School", students: 1120, teachers: 40, type: "Private", year: "2024" },
+  { school: "High School", students: 1100, teachers: 50, type: "Private", year: "2021" },
+  { school: "High School", students: 1120, teachers: 40, type: "Private", year: "2022" },
   { school: "High School", students: 1000, teachers: 40, type: "Private", year: "2023" },
-  { school: "High School", students: 1200, teachers: 40, type: "Private", year: "2022" },
+  { school: "High School", students: 1200, teachers: 40, type: "Private", year: "2024" },
+  { school: "High School", students: 1200, teachers: 40, type: "Private", year: "2025"},
 ];
 
 const StudentTeacherRatioPerSchool = ({ year }) => {

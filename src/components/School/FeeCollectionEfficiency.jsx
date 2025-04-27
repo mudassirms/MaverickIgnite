@@ -4,11 +4,11 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample data for fee collection efficiency (only for one school)
 const allFeeData = [
-  { school: "High School", efficiency: 96, year: "2025" },
-  { school: "High School", efficiency: 89, year: "2024" },
+  { school: "High School", efficiency: 96, year: "2021" },
+  { school: "High School", efficiency: 89, year: "2022" },
   { school: "High School", efficiency: 92, year: "2023" },
-  { school: "High School", efficiency: 85, year: "2022" },
-  { school: "High School", efficiency: 91, year: "2021" },
+  { school: "High School", efficiency: 85, year: "2024" },
+  { school: "High School", efficiency: 91, year: "2025" },
 ];
 
 const FeeCollectionEfficiency = ({ year }) => {

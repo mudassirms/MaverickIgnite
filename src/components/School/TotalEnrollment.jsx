@@ -4,11 +4,11 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample enrollment data for one school (no schoolType filtering)
 const allEnrollmentData = [
-  { year: "2024", enrollment: 850 },
-  { year: "2025", enrollment: 920 },
+  { year: "2021", enrollment: 850 },
+  { year: "2022", enrollment: 920 },
   { year: "2023", enrollment: 880 },
-  { year: "2022", enrollment: 970 },
-  { year: "2021", enrollment: 1030 },
+  { year: "2024", enrollment: 970 },
+  { year: "2025", enrollment: 1030 },
   // { year: "2023", enrollment: 1100 },
 ];
 

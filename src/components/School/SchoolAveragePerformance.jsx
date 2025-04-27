@@ -4,10 +4,11 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample data for all schools and years
 const allPerformanceData = [
-  { school: "Greenwood High", average: 72, year: "2022" },
-  { school: "Greenwood High", average: 78, year: "2023" },
-  { school: "Greenwood High", average: 81, year: "2024" },
-  { school: "Greenwood High", average: 85, year: "2025" },
+  {school:"High School", average: 65, year: "2021"},
+  { school: "High School", average: 72, year: "2022" },
+  { school: "High School", average: 78, year: "2023" },
+  { school: "High School", average: 81, year: "2024" },
+  { school: "High School", average: 85, year: "2025" },
 ];
 
 const SchoolYearWisePerformance = ({ year }) => {

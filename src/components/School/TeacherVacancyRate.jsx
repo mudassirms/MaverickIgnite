@@ -4,11 +4,11 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample data with year and vacancy rate
 const allVacancyData = [
-  { year: "2025", vacancy: 10 },
-  { year: "2024", vacancy: 12 },
-  { year: "2023", vacancy: 7 },
-  { year: "2022", vacancy: 15 },
   { year: "2021", vacancy: 21 },
+  { year: "2022", vacancy: 10 },
+  { year: "2023", vacancy: 12 },
+  { year: "2024", vacancy: 7 },
+  { year: "2025", vacancy: 15 },
 ];
 
 const TeacherVacancyRate = ({ year }) => {
