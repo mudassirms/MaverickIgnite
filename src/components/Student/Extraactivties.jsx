@@ -16,10 +16,7 @@ const activityData = [
   // { activity: "Debate", participants: 30, year: "2023", grade: "Grade 10" },
   // { activity: "Art", participants: 60, year: "2023", grade: "10" },
 
-  { activity: "Music", participants: 50, year: "2024", grade: "Grade 9" },
-  { activity: "Drama", participants: 25, year: "2024", grade: "Grade 9" },
-  { activity: "Sports", participants: 100, year: "2024", grade: " Grade 9" },
-
+ 
   // { activity: "Debate", participants: 20, year: "2024", grade: "Grade 8" },
   // { activity: "Art", participants: 40, year: "2024", grade: "8" },
 ];
