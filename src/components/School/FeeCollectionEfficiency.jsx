@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-// Sample data for fee collection efficiency (only for one school)
+// Sample data for fee collection efficiency
 const allFeeData = [
   { school: "High School", efficiency: 96, year: "2021" },
   { school: "High School", efficiency: 89, year: "2022" },
@@ -12,19 +12,11 @@ const allFeeData = [
 ];
 
 const FeeCollectionEfficiency = ({ year }) => {
-  // If no year is selected, display overall data (combine all years)
-  const filteredData = year
-    ? allFeeData.filter((item) => item.year === year)
-    : allFeeData;
-
-  // If no data is found for the selected year or overall, return a message or empty chart
-  if (filteredData.length === 0) {
-    return <div>No data available for the selected year.</div>;
-  }
+  const filteredData = allFeeData.filter((item) => (year ? item.year === year : true));
 
   const chartOptions = {
     chart: {
-      type: "column",
+      type: "areaspline",
       backgroundColor: "#1F2937",
       style: {
         fontFamily: "sans-serif",
@@ -36,43 +28,54 @@ const FeeCollectionEfficiency = ({ year }) => {
     },
     xAxis: {
       categories: filteredData.map((d) => d.year),
-      title: {
-        // text: "Year",
-        style: { color: "#F9FAFB" },
-      },
+      title: { text: "Year", style: { color: "#F9FAFB" } },
       labels: { style: { color: "#F9FAFB" } },
+      lineColor: "#4B5563",
     },
     yAxis: {
-      min: 0,
       title: {
         text: "Efficiency (%)",
         style: { color: "#F9FAFB" },
       },
       labels: { style: { color: "#F9FAFB" } },
+      gridLineColor: "#374151",
     },
     tooltip: {
       backgroundColor: "#111827",
       borderColor: "#4B5563",
       style: { color: "#F9FAFB" },
-      pointFormat: "Efficiency: <b>{point.y}%</b>",
+      headerFormat: "",
+      pointFormat: "<b>{point.y}%</b>",
+      useHTML: true,
     },
     plotOptions: {
-      column: {
-        borderRadius: 5,
-        dataLabels: {
-          enabled: true,
-          style: { color: "#F9FAFB" },
-          format: "{y}%",
+      series: {
+        marker: {
+          enabled: !!year,  // Enable markers if a year is selected, else hide
+          radius: 5,         // Slightly bigger dots
+          fillColor: "#b791c9",
+          lineWidth: 2,
+          lineColor: "#b791c9",
+          states: {
+            hover: {
+              enabled: true,
+              lineWidthPlus: 0,
+            },
+          },
         },
+      },
+      areaspline: {
+        fillOpacity: 0.3,
       },
     },
     series: [
       {
-        name: "Year",
+        name: "Efficiency",
         data: filteredData.map((d) => d.efficiency),
-        color: "#b791c9 ",
+        color: "#b791c9",
       },
     ],
+    legend: { enabled: false },
     credits: { enabled: false },
   };
 
@@ -83,7 +86,11 @@ const FeeCollectionEfficiency = ({ year }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.2 }}
     >
-      <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+      {filteredData.length === 0 ? (
+        <p className="text-red-400 text-sm">No data found for year {year}.</p>
+      ) : (
+        <HighchartsReact highcharts={Highcharts} options={chartOptions} />
+      )}
     </motion.div>
   );
 };

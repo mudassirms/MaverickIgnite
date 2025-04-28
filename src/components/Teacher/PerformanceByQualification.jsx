@@ -5,12 +5,12 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample data with qualification and year attributes
 const performanceData = [
-  { qualification: "B.Ed", performance: 85, year: "2023" },
-  { qualification: "M.Ed", performance: 90, year: "2022" },
-  { qualification: "Ph.D", performance: 95, year: "2023" },
-  { qualification: "B.Ed", performance: 88, year: "2022" },
-  { qualification: "M.Ed", performance: 92, year: "2023" },
-  { qualification: "Ph.D", performance: 97, year: "2022" },
+  { qualification: "B.Ed", performance: 85, year: "2025" },
+  { qualification: "M.Ed", performance: 90, year: "2025" },
+  { qualification: "Ph.D", performance: 95, year: "2025" },
+  { qualification: "B.Ed", performance: 88, year: "2024" },
+  { qualification: "M.Ed", performance: 92, year: "2024" },
+  { qualification: "Ph.D", performance: 97, year: "2024" },
 ];
 
 const PerformanceByQualification = ({ year, qualification }) => {

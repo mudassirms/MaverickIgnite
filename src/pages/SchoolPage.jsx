@@ -22,7 +22,7 @@ import FeeCollectionEfficiency from "../components/School/FeeCollectionEfficienc
 
 const totalStats = {
   totalEnrollment: "4,512",
-  avgPerformance: "74%",
+  avgPerformance: "87%",
   infrastructureScore: "81",
   feeEfficiency: "89%",
   dropoutRate: "6.2%", 
@@ -30,7 +30,7 @@ const totalStats = {
 
 const filteredStats = {
   totalEnrollment: "1,234",
-  avgPerformance: "77%",
+  avgPerformance: "87%",
   infrastructureScore: "85",
   feeEfficiency: "91%",
   dropoutRate: "4.8%",  
@@ -80,7 +80,7 @@ const SchoolsPage = () => {
             color="#3B82F6"
           />
           <StatCard
-            name="Avg. Performance"
+            name="Avg Students Performance"
             icon={BarChart2}
             value={stats.avgPerformance}
             color="#10B981"
@@ -92,7 +92,7 @@ const SchoolsPage = () => {
             color="#8B5CF6"
           />
           <StatCard
-            name="Fee Efficiency"
+            name="Fee Collection Efficiency"
             icon={DollarSign}
             value={stats.feeEfficiency}
             color="#06B6D4"

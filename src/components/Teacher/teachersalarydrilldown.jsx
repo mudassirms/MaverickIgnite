@@ -6,15 +6,25 @@ const teacherData = [
   { name: "Mr. Sharma", salary: 28000, performance: 72 },
   { name: "Kunaal", salary: 25000, performance: 70 },
   { name: "Karthik", salary: 29000, performance: 82 },
+  { name: "Mr. Haris", salary: 28000, performance: 72 },
+
   { name: "Ms. Rani", salary: 34000, performance: 78 },
   { name: "Mr. Patel", salary: 39000, performance: 80 },
+  { name: "Ronak", salary: 31000, performance: 70 },
+  { name: "Kadeer", salary: 32000, performance: 82 },
+
   { name: "Mr. Jabbar", salary: 47000, performance: 85 },
-  { name: "Mr. Ayaaz", salary: 54000, performance: 88 },
-  { name: "Ms. Inayat", salary: 63000, performance: 92 },
-  { name: "Mr. Haris", salary: 28000, performance: 72 },
-  { name: "Ronak", salary: 25000, performance: 70 },
-  { name: "Kadeer", salary: 29000, performance: 82 },
-  { name: "Ms. Sufi", salary: 34000, performance: 78 },
+  { name: "Mr. Ayaaz", salary: 48000, performance: 88 },
+  { name: "Ms. Inayat", salary: 44000, performance: 92 },
+
+  { name: "Ms. Sufi", salary: 52000, performance: 78 },
+  { name: "Mr. Patel", salary: 53000, performance: 78 },
+  { name: "Ms. Sawita", salary: 59000, performance: 78 },
+
+  { name: "Ms. Shweta", salary: 63000, performance: 78 },
+  { name: "Mr. Bhartesh", salary: 64500, performance: 78 },
+  { name: "Ms. Pritam", salary: 61200, performance: 78 },
+  { name: "Mr. Anand", salary: 60800, performance: 78 },
 ];
 
 const salaryRanges = [

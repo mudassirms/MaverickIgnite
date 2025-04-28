@@ -10,7 +10,7 @@ const topStudentsData = [
   { name: "Sam", score: 45, year: "2025", grade: "Grade 10" },
   { name: "Sarah", score: 75, year: "2025", grade: "Grade 10" },
 
-  { name: "Abdullah", score: 90, year: "2022", grade: "Grade 10" },
+  { name: "Abid", score: 90, year: "2022", grade: "Grade 10" },
   { name: "Amit", score: 89, year: "2022", grade: "Grade 10" },
   { name: "Sohail", score: 91, year: "2022", grade: "Grade 10" },
   { name: "Sam", score: 88, year: "2022", grade: "Grade 10" },
@@ -46,7 +46,11 @@ const TopPerformingStudents = ({ year, grade }) => {
     xAxis: {
       categories: filteredStudents.map((s) => s.name),
       title: { text: null },
-      labels: { style: { color: "#D1D5DB" } },
+      labels: {
+        style: { color: "#D1D5DB" },
+      },
+      // Remove extra labels on x-axis (score label issue)
+      tickWidth: 0, // Removes ticks from x-axis
     },
     yAxis: {
       min: 0,
@@ -68,23 +72,27 @@ const TopPerformingStudents = ({ year, grade }) => {
     },
     series: [
       {
-        name: "Score",
+        name: "", // Remove series name so it doesn't appear in the legend
         data: filteredStudents.map((s) => s.score),
         color: "#22D3EE",
+        enableMouseTracking: false, // Disable mouse tracking to remove hover dots
       },
     ],
     credits: { enabled: false },
+    legend: {
+      enabled: false, // Disable the legend to remove series name dot
+    },
   };
 
   return (
     <motion.div
-      className='bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700'
+      className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.8 }}
     >
       {filteredStudents.length === 0 ? (
-        <p className='text-red-400 text-sm'>
+        <p className="text-red-400 text-sm">
           No data available for {grade}, {year}.
         </p>
       ) : (

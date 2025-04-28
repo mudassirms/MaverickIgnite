@@ -4,18 +4,18 @@ import HighchartsReact from "highcharts-react-official";
 
 // Extended sample data with year and qualification
 const data = [
-  { month: "Jan", absenteeism: 3.2, year: "2023", qualification: "B.Ed" },
-  { month: "Feb", absenteeism: 2.8, year: "2023", qualification: "B.Ed" },
-  { month: "Mar", absenteeism: 3.5, year: "2023", qualification: "B.Ed" },
-  { month: "Apr", absenteeism: 4.0, year: "2023", qualification: "M.Ed" },
-  { month: "May", absenteeism: 3.7, year: "2023", qualification: "M.Ed" },
-  { month: "Jun", absenteeism: 2.5, year: "2023", qualification: "Ph.D" },
-  { month: "Jul", absenteeism: 3.0, year: "2023", qualification: "Ph.D" },
-  { month: "Aug", absenteeism: 2.9, year: "2022", qualification: "B.Ed" },
-  { month: "Sep", absenteeism: 3.3, year: "2022", qualification: "M.Ed" },
-  { month: "Oct", absenteeism: 3.1, year: "2022", qualification: "Ph.D" },
-  { month: "Nov", absenteeism: 2.7, year: "2022", qualification: "Ph.D" },
-  { month: "Dec", absenteeism: 3.4, year: "2022", qualification: "Ph.D" },
+  { month: "Jan", absenteeism: 3.2, year: "2025", qualification: "B.Ed" },
+  { month: "Feb", absenteeism: 2.8, year: "2025", qualification: "B.Ed" },
+  { month: "Mar", absenteeism: 3.5, year: "2025", qualification: "B.Ed" },
+  { month: "Apr", absenteeism: 4.0, year: "2025", qualification: "M.Ed" },
+  { month: "May", absenteeism: 3.7, year: "2025", qualification: "M.Ed" },
+  { month: "Jun", absenteeism: 2.5, year: "2025", qualification: "Ph.D" },
+  { month: "Jul", absenteeism: 3.0, year: "2025", qualification: "Ph.D" },
+  { month: "Aug", absenteeism: 2.9, year: "2024", qualification: "B.Ed" },
+  { month: "Sep", absenteeism: 3.3, year: "2024", qualification: "M.Ed" },
+  { month: "Oct", absenteeism: 3.1, year: "2024", qualification: "Ph.D" },
+  { month: "Nov", absenteeism: 2.7, year: "2024", qualification: "Ph.D" },
+  { month: "Dec", absenteeism: 3.4, year: "2024", qualification: "Ph.D" },
 ];
 
 const TeacherAbsenteeismRate = ({ year, qualification }) => {

@@ -44,7 +44,7 @@ const InfrastructureScore = ({ year }) => {
       style: { fontFamily: "sans-serif" },
     },
     title: {
-      text: `Average Infrastructure ${year ? `${year}` : ""}`,
+      text: `Year-wise Average Infrastructure ${year ? `${year}` : ""}`,
       style: { color: "#F9FAFB" },
     },
     xAxis: {

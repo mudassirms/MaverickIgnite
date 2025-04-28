@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-// Sample dataset
+// Sample dataset with additional teachers
 const performanceData = [
-  { Grade: "Grade 9", MrSharma: 72, MsRani: 70, MrPatel: 75, year: "2023", qualification: "M.Ed" },
-  { Grade: "Grade 8", MrSharma: 75, MsRani: 73, MrPatel: 78, year: "2022", qualification: "B.Ed" },
-  { Grade: "Grade 10", MrSharma: 78, MsRani: 76, MrPatel: 80, year: "2023", qualification: "Ph.D" },
+  { Grade: "Grade 7", Kunaal: 72, MsRani: 70, MrPatel: 75, MrSharma: 80, Karthik: 85, Jabbar: 78, year: "2025", qualification: "M.Ed" },
+  { Grade: "Grade 8", MrSharma: 75, MsRani: 73, MrPatel: 78, Kunaal: 72, Karthik: 80, Jabbar: 77, year: "2024", qualification: "B.Ed" },
+  { Grade: "Grade 9", MrSharma: 78, MsRani: 76, MrPatel: 80, Kunaal: 80, Karthik: 85, Jabbar: 82, year: "2023", qualification: "Ph.D" },
+  { Grade: "Grade 10", Kunaal: 78, MsRani: 76, MrPatel: 80, MrSharma: 82, Karthik: 88, Jabbar: 83, year: "2022", qualification: "Ph.D" },
   // Add more teachers as needed...
 ];
 
@@ -44,6 +45,30 @@ const PerformanceByClass = ({ year, qualification }) => {
         name: "Mr. Patel",
         data: filteredData.map((d) => d.MrPatel),
         color: "#F59E0B",
+      });
+    }
+
+    if (selectedTeacher === "Kunaal") {
+      series.push({
+        name: "Mr. Kunaal",
+        data: filteredData.map((d) => d.Kunaal),
+        color: "#F472B6",
+      });
+    }
+
+    if (selectedTeacher === "Karthik") {
+      series.push({
+        name: "Karthik",
+        data: filteredData.map((d) => d.Karthik),
+        color: "#9333EA",
+      });
+    }
+
+    if (selectedTeacher === "Jabbar") {
+      series.push({
+        name: "Jabbar",
+        data: filteredData.map((d) => d.Jabbar),
+        color: "#FBBF24",
       });
     }
 
@@ -99,7 +124,7 @@ const PerformanceByClass = ({ year, qualification }) => {
       transition={{ delay: 0.2 }}
     >
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-semibold text-white">Performance by Class Taught</h2>
+        <h2 className="text-2xl font-semibold text-white">Teacher Performance by Class Taught</h2>
         <select
           className="bg-gray-700 text-white px-4 py-2 rounded-md border border-gray-600 focus:outline-none max-h-40 overflow-y-scroll"
           value={selectedTeacher}
@@ -109,7 +134,9 @@ const PerformanceByClass = ({ year, qualification }) => {
           <option value="MrSharma">Mr. Sharma</option>
           <option value="MsRani">Ms. Rani</option>
           <option value="MrPatel">Mr. Patel</option>
-          {/* Add more teachers here */}
+          <option value="Kunaal">Mr. Kunaal</option>
+          <option value="Karthik">Karthik</option>
+          <option value="Jabbar">Jabbar</option>
         </select>
       </div>
 

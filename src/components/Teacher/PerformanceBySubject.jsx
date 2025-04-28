@@ -4,18 +4,18 @@ import HighchartsReact from "highcharts-react-official";
 
 // Sample data including year and qualification
 const data = [
-  { subject: "Math", score: 82, year: "2023", qualification: "B.Ed" },
-  { subject: "Science", score: 76, year: "2022", qualification: "B.Ed" },
-  { subject: "English", score: 88, year: "2023", qualification: "M.Ed" },
-  { subject: "History", score: 70, year: "2022", qualification: "M.Ed" },
-  { subject: "Geography", score: 75, year: "2023", qualification: "Ph.D" },
-  { subject: "Computer", score: 90, year: "2022", qualification: "Ph.D" },
-  { subject: "Math", score: 85, year: "2022", qualification: "B.Ed" },
-  { subject: "Science", score: 80, year: "2023", qualification: "M.Ed" },
-  { subject: "English", score: 92, year: "2022", qualification: "Ph.D" },
-  { subject: "History", score: 74, year: "2023", qualification: "B.Ed" },
-  { subject: "Geography", score: 78, year: "2022", qualification: "M.Ed" },
-  { subject: "Computer", score: 94, year: "2023", qualification: "Ph.D" },
+  { subject: "Math", score: 82, year: "2025", qualification: "B.Ed" },
+  { subject: "Science", score: 76, year: "2025", qualification: "B.Ed" },
+  { subject: "English", score: 88, year: "2025", qualification: "M.Ed" },
+  { subject: "History", score: 70, year: "2025", qualification: "M.Ed" },
+  { subject: "Geography", score: 75, year: "2025", qualification: "Ph.D" },
+  { subject: "Computer", score: 90, year: "2025", qualification: "Ph.D" },
+  { subject: "Math", score: 85, year: "2024", qualification: "B.Ed" },
+  { subject: "Science", score: 80, year: "2024", qualification: "M.Ed" },
+  { subject: "English", score: 92, year: "2024", qualification: "Ph.D" },
+  { subject: "History", score: 74, year: "2024", qualification: "B.Ed" },
+  { subject: "Geography", score: 78, year: "2024", qualification: "M.Ed" },
+  { subject: "Computer", score: 94, year: "2024", qualification: "Ph.D" },
 ];
 
 // Aggregate scores by subject
@@ -55,6 +55,7 @@ const PerformanceBySubject = ({ year, qualification }) => {
       categories: averagedData.map((d) => d.subject),
       title: { text: null },
       labels: { style: { color: "#F9FAFB" } },
+      tickWidth: 0, // Removes ticks from x-axis
     },
     yAxis: {
       min: 0,
@@ -80,23 +81,29 @@ const PerformanceBySubject = ({ year, qualification }) => {
     },
     series: [
       {
-        name: "Average Score",
+        name: "", // Remove series name so it doesn't appear in the legend
         data: averagedData.map((d) => d.score),
         color: "#34D399",
+        enableMouseTracking: false, // Disable hover interaction to remove dots
       },
     ],
     credits: { enabled: false },
+    legend: {
+      enabled: false, // Disable the legend to remove series name dot
+    },
     responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 700,
-        },
-        chartOptions: {
-          chart: {
-            height: "100%",
+      rules: [
+        {
+          condition: {
+            maxWidth: 700,
+          },
+          chartOptions: {
+            chart: {
+              height: "100%",
+            },
           },
         },
-      }],
+      ],
     },
   };
 

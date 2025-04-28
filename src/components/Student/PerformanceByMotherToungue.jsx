@@ -7,6 +7,7 @@ const COLORS = {
   Hindi: "#6366F1",   // Indigo
   English: "#10B981", // Emerald
   Marathi: "#F59E0B", // Amber
+  URdu: "#6366F1",
   Telugu: "#3B82F6",  // Blue
   Tamil: "#EC4899",   // Pink
   Default: "#A78BFA", // Violet
@@ -16,10 +17,12 @@ const motherTongueData = [
   { language: "Hindi", avgMarks: 76, year: "2025", grade: "Grade 10" },
   { language: "English", avgMarks: 82, year: "2025", grade: "Grade 10" },
   { language: "Marathi", avgMarks: 74, year: "2025", grade: "Grade 10" },
+  { language: "Urdu", avgMarks: 76, year: "2025", grade: "Grade 10" },
   { language: "Telugu", avgMarks: 79, year: "2025", grade: "Grade 10" },
   { language: "Tamil", avgMarks: 81, year: "2025", grade: "Grade 10" },
   { language: "Hindi", avgMarks: 98, year: "2022", grade: "Grade 9" },
   { language: "English", avgMarks: 82, year: "2022", grade: "Grade 9" },
+  { language: "Urdu", avgMarks: 76, year: "2025", grade: "Grade 10" },
   { language: "Marathi", avgMarks: 65, year: "2022", grade: "Grade 9" },
   { language: "Telugu", avgMarks: 80, year: "2022", grade: "Grade 9" },
   { language: "Tamil", avgMarks: 63, year: "2022", grade: "Grade 9" },

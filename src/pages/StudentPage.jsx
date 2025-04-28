@@ -24,7 +24,7 @@ import ExtracurricularActivities from "../components/Student/Extraactivties";
 
 const totalStats = {
   totalStudents: "1,250",
-  avgPerformance: "78.2%",
+  avgPerformance: "87%",
   dropoutRate: "6.2%",
   topPerformers: "125",
 };
@@ -32,7 +32,7 @@ const totalStats = {
 // Replace with actual data for filtered stats based on year and grade
 const filteredStats = {
   totalStudents: "200",
-  avgPerformance: "80.5%",
+  avgPerformance: "87%",
   dropoutRate: "3.2%",
   topPerformers: "50",
 };
@@ -85,7 +85,7 @@ const StudentPage = () => {
           transition={{ duration: 1 }}
         >
           <StatCard name='Total Students' icon={Users} value={studentStats.totalStudents} color='#6366F1' />
-          <StatCard name='Avg. Performance' icon={BarChart2} value={studentStats.avgPerformance} color='#10B981' />
+          <StatCard name='Avg Students Performance' icon={BarChart2} value={studentStats.avgPerformance} color='#10B981' />
           <StatCard name='Dropout Rate' icon={TrendingUp} value={studentStats.dropoutRate} color='#F59E0B' />
           <StatCard name='Top Performers' icon={GraduationCap} value={studentStats.topPerformers} color='#EF4444' />
         </motion.div>

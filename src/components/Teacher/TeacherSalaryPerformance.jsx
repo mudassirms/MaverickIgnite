@@ -9,7 +9,7 @@ const teacherData = [
   
   { name: "Karthik", salary: 29000, performance: 82 },
   { name: "Ms. Rani", salary: 34000, performance: 78 },
-  { name: "Mr. Patel", salary: 39000, performance: 80 },
+  { name: "Ms. Pooja", salary: 39000, performance: 80 },
   { name: "Mr. Jabbar", salary: 47000, performance: 85 },
   { name: "Mr. Ayaaz", salary: 54000, performance: 88 },
   { name: "Ms. Inayat", salary: 63000, performance: 92 },
@@ -45,7 +45,7 @@ const TeacherPerformanceBySalary = () => {
       backgroundColor: "#1F2937",
     },
     title: {
-      text: `Teacher Performance ${selectedRange ? `(${selectedRange})` : ""}`,
+      text: `Pay-wise Performance ${selectedRange ? `(${selectedRange})` : ""}`,
       style: { color: "#F9FAFB" },
     },
     xAxis: {
