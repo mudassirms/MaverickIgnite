@@ -3,8 +3,8 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const FinalExamPerformance = ({ performanceData }) => {
-  // Mapping grades directly to "Grade 1", "Grade 2", etc.
-  const gradeLabels = ["Grade 5", "Grade 6", "Grade 7", "Grade 8"];
+  // Dynamically generate grade labels from performanceData
+  const gradeLabels = performanceData.map((d) => `Grade ${d.class}`);
 
   const chartOptions = {
     chart: {
@@ -16,9 +16,10 @@ const FinalExamPerformance = ({ performanceData }) => {
       style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: gradeLabels.slice(0, performanceData.length), // Match data length
+      categories: gradeLabels,
       labels: { style: { color: "#D1D5DB" } },
       gridLineColor: "#374151",
+      title: { text: "Grade", style: { color: "#D1D5DB" } },
     },
     yAxis: {
       title: {
@@ -40,7 +41,7 @@ const FinalExamPerformance = ({ performanceData }) => {
       {
         name: "Performance",
         data: performanceData.map((d) => d.performance),
-        color: "#10B981", // Emerald green
+        color: "#10B981",
       },
     ],
     credits: { enabled: false },

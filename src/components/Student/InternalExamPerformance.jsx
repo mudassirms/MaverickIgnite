@@ -9,17 +9,17 @@ const InternalExamPerformance = ({ performanceData }) => {
   // Transform the data to create three separate series for the three exams
   const seriesData = [
     {
-      name: "Exam 1",
+      name: "Pre Mid Term",
       data: examScores.map((scores) => scores[0]),
       color: "#10B981", // Green
     },
     {
-      name: "Exam 2",
+      name: "Mid Term",
       data: examScores.map((scores) => scores[1]),
       color: "#4B5563", // Grayish
     },
     {
-      name: "Exam 3",
+      name: "Post Mid Term",
       data: examScores.map((scores) => scores[2]),
       color: "#3B82F6", // Blue
     },
@@ -35,9 +35,9 @@ const InternalExamPerformance = ({ performanceData }) => {
       style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: performanceData.map((d) => d.className),
+      categories: performanceData.map((d) => `Grade ${d.class}`), // Corrected this line
       labels: { style: { color: "#D1D5DB" } },
-      gridLineColor: "#374151",
+      gridLineColor: "#E5E7EB",
     },
     yAxis: {
       title: {
@@ -57,7 +57,12 @@ const InternalExamPerformance = ({ performanceData }) => {
     },
     series: seriesData,
     credits: { enabled: false },
-    legend: { enabled: true },
+    legend: {
+      enabled: true,
+      itemStyle: {
+        color: "#FFFFFF", // White legend text
+      },
+    },
   };
 
   return (

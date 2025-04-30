@@ -20,10 +20,10 @@ const FinalExamHeatmap = ({ finalExamScores }) => {
 
   return (
     <div className="bg-gray-800 p-4 rounded-xl shadow-md w-full">
-      <h3 className="text-lg font-semibold text-white mb-4">Final Exam Performance (Heatmap)</h3>
+      <h3 className="text-lg font-semibold text-white text-center mb-4">Final Exam Performance</h3>
       <div className="overflow-x-auto">
-        <table className="w-full text-sm text-white text-center">
-          <thead>
+      <table className="w-full text-sm text-white text-center border-separate border-spacing-2">
+      <thead>
             <tr>
               <th className="py-2">Subject</th>
               {classes.map((cls) => (

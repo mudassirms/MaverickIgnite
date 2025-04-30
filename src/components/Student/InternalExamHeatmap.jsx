@@ -29,21 +29,22 @@ const InternalExamHeatmap = ({ internalExamScores }) => {
 
   return (
     <div className="bg-gray-800 p-4 rounded-xl shadow-md w-full">
-      <h3 className="text-lg font-semibold text-white mb-4">
-        Internal Exam Performance (Heatmap)
+      <h3 className="text-lg font-semibold text-center text-white mb-4">
+        Internal Exam Performance
       </h3>
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-white text-center border-separate border-spacing-2">
-          <thead>
-            <tr>
-              <th className="py-2 px-4 bg-gray-700 rounded">Subject</th>
-              {allClasses.map((exam) => (
-                <th key={exam} className="py-2 px-4 bg-gray-700 rounded">
-                  {exam}
-                </th>
-              ))}
-            </tr>
-          </thead>
+        <thead>
+  <tr>
+    <th className="py-2 px-4 bg-gray-700 rounded">Subject</th>
+    {allClasses.map((exam) => (
+      <th key={exam} className="py-2 px-4 bg-gray-700 rounded font-normal">
+        {exam}
+      </th>
+    ))}
+  </tr>
+</thead>
+
           <tbody>
             {subjects.map((subject) => (
               <tr key={subject}>

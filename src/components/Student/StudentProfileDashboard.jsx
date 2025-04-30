@@ -50,7 +50,7 @@ const students = [
         { class: "7", scores: [85, 90, 95] },
         {class:  "8", scores:   [65, 56, 89] },
       ],
-      attendance: 92,
+      attendance: 95,
       behaviorRatings: [
         {
           class: "8",
@@ -67,25 +67,27 @@ const students = [
       activityParticipation: {
         availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
         participationHistory: [
-          { year: "2022", participated: ["Sports", "Art"] },
-          { year: "2023", participated: ["Music", "Debate", "Drama"] },
-          { year: "2024", participated: ["Debate", "Drama", "Sports"] }
+            { class: "5", participated: ["Sports", "Art"] },
+            { class: "6", participated: ["Drama"] },
+            { class: "7", participated: ["Drama", "Sports"] },
+            { class: "8", participated: ["Sports", "Art"] }
+
         ]
       }, 
       internalExamScores: {
         Math: {
-          "Class 5 - Pre Mid Term": 45,
-          "Class 5 - Mid Term": 51,
-          "Class 5 - Post Mid Term": 60,
+          "Class 5 - Pre Mid Term": 41,
+          "Class 5 - Mid Term": 49,
+          "Class 5 - Post Mid Term": 50,
           "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 75,
-          "Class 6 - Post Mid Term": 80,
-          "Class 7 - Pre Mid Term": 60,
-          "Class 7 - Mid Term": 75,
-          "Class 7 - Post Mid Term": 80,
-          "Class 8 - Pre Mid Term": 80,
-          "Class 8 - Mid Term": 82,
-          "Class 8 - Post Mid Term": 85,
+          "Class 6 - Mid Term": 62,
+          "Class 6 - Post Mid Term": 75,
+          "Class 7 - Pre Mid Term": 59,
+          "Class 7 - Mid Term": 62,
+          "Class 7 - Post Mid Term": 68,
+          "Class 8 - Pre Mid Term": 70,
+          "Class 8 - Mid Term": 72,
+          "Class 8 - Post Mid Term": 80,
         },
         Science: {
           "Class 5 - Pre Mid Term": 50,
@@ -94,12 +96,12 @@ const students = [
           "Class 6 - Pre Mid Term": 75,
           "Class 6 - Mid Term": 74,
           "Class 6 - Post Mid Term": 80,
-          "Class 7 - Pre Mid Term": 60,
-          "Class 7 - Mid Term": 75,
-          "Class 7 - Post Mid Term": 80,
-          "Class 8 - Pre Mid Term": 86,
-          "Class 8 - Mid Term": 88,
-          "Class 8 - Post Mid Term": 89,
+          "Class 7 - Pre Mid Term": 49,
+          "Class 7 - Mid Term": 58,
+          "Class 7 - Post Mid Term": 62,
+          "Class 8 - Pre Mid Term": 58,
+          "Class 8 - Mid Term": 60,
+          "Class 8 - Post Mid Term": 69,
         },
         English: {
           "Class 5 - Pre Mid Term": 90,
@@ -119,16 +121,16 @@ const students = [
         History: {
             "Class 5 - Pre Mid Term": 45,
             "Class 5 - Mid Term": 51,
-            "Class 5 - Post Mid Term": 60,
-            "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 75,
-            "Class 6 - Post Mid Term": 80,
-            "Class 7 - Pre Mid Term": 60,
-            "Class 7 - Mid Term": 75,
-            "Class 7 - Post Mid Term": 80,
-            "Class 8 - Pre Mid Term": 87,
-            "Class 8 - Mid Term": 88,
-            "Class 8 - Post Mid Term": 86,
+            "Class 5 - Post Mid Term": 52,
+            "Class 6 - Pre Mid Term": 49,
+            "Class 6 - Mid Term": 56,
+            "Class 6 - Post Mid Term": 65,
+            "Class 7 - Pre Mid Term": 64,
+            "Class 7 - Mid Term": 68,
+            "Class 7 - Post Mid Term": 70,
+            "Class 8 - Pre Mid Term": 74,
+            "Class 8 - Mid Term": 74,
+            "Class 8 - Post Mid Term": 70,
           },
           Geography: {
             "Class 5 - Pre Mid Term": 45,
@@ -140,23 +142,23 @@ const students = [
             "Class 7 - Pre Mid Term": 60,
             "Class 7 - Mid Term": 75,
             "Class 7 - Post Mid Term": 80,
-            "Class 8 - Pre Mid Term": 79,
-            "Class 8 - Mid Term": 81,
-            "Class 8 - Post Mid Term": 87,
+            "Class 8 - Pre Mid Term": 75,
+            "Class 8 - Mid Term": 80,
+            "Class 8 - Post Mid Term": 81,
           },
           Computer: {
             "Class 5 - Pre Mid Term": 45,
             "Class 5 - Mid Term": 51,
             "Class 5 - Post Mid Term": 60,
             "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 75,
-            "Class 6 - Post Mid Term": 80,
-            "Class 7 - Pre Mid Term": 60,
-            "Class 7 - Mid Term": 75,
-            "Class 7 - Post Mid Term": 80,
-            "Class 8 - Pre Mid Term": 80,
-            "Class 8 - Mid Term": 82,
-            "Class 8 - Post Mid Term": 88,
+            "Class 6 - Mid Term": 65,
+            "Class 6 - Post Mid Term": 70,
+            "Class 7 - Pre Mid Term": 69,
+            "Class 7 - Mid Term": 74,
+            "Class 7 - Post Mid Term": 78,
+            "Class 8 - Pre Mid Term": 75,
+            "Class 8 - Mid Term": 78,
+            "Class 8 - Post Mid Term": 80,
           },
       },
       
@@ -184,8 +186,8 @@ const students = [
         Science: { "Class 5": 77, "Class 6": 74, "Class 7": 80, "Class 8": 84 },
         English: { "Class 5": 90, "Class 6": 88, "Class 7": 91, "Class 8": 93 },
         History: { "Class 5": 68, "Class 6": 71, "Class 7": 75, "Class 8": 79 },
-        Geography: { "Class 5": 32, "Class 6": 56, "Class 7": 65, "Class 8": 75 },
-        Computer: { "Class 5": 42, "Class 6": 61, "Class 7": 73, "Class 8": 80 },
+        Geography: { "Class 5": 58, "Class 6": 56, "Class 7": 65, "Class 8": 75 },
+        Computer: { "Class 5": 49, "Class 6": 61, "Class 7": 73, "Class 8": 80 },
       },
 
       finalExamPerformance: [
@@ -217,9 +219,11 @@ const students = [
       activityParticipation: {
         availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
         participationHistory: [
-          { year: "2022", participated: ["Sports", "Art"] },
-          { year: "2023", participated: ["Music", "Debate", "Drama"] },
-          { year: "2024", participated: ["Debate", "Drama", "Sports"] }
+          { class: "5", participated: ["Sports", "Art"] },
+          { class: "6", participated: ["Drama"] },
+          { class: "7", participated: ["Debate", "Drama", "Sports"] },
+          { class: "8", participated: ["Sports", "Art"] }
+
         ]
       },
       internalExamScores: {
@@ -349,10 +353,10 @@ const students = [
           { class: "7", scores: [98, 90, 89] },
           {class:  "8", scores:  [65, 56, 89] },
         ],
-        attendance: 75,   // 🟠 <--- Add attendance field
+        attendance: 72,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
-              class: "8",
+            //   class: "8",
               ratings: [
                 { subject: "Math", rating: 5 },
                 { subject: "Science", rating: 4.5 },
@@ -366,9 +370,11 @@ const students = [
           activityParticipation: {
             availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
             participationHistory: [
-              { year: "2022", participated: ["Sports", "Art"] },
-              { year: "2023", participated: ["Music", "Debate", "Drama"] },
-              { year: "2024", participated: ["Debate", "Drama", "Sports"] }
+              { class: "5", participated: ["Sports", "Art"] },
+              { class: "6", participated: ["Drama"] },
+              { class: "7", participated: ["Debate", "Drama", "Sports"] },
+              { class: "8", participated: ["Sports", "Art"] }
+
             ]
           },
           internalExamScores: {
@@ -499,7 +505,7 @@ const students = [
           { class: "7", scores: [80, 83, 92] },
           {class:  "8", scores:   [65, 56, 89] },
         ],
-        attendance: 80,   // 🟠 <--- Add attendance field
+        attendance: 48,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
               class: "8",
@@ -516,9 +522,10 @@ const students = [
           activityParticipation: {
             availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
             participationHistory: [
-              { year: "2022", participated: ["Music", "Art"] },
-              { year: "2023", participated: ["Debate", "Drama"] },
-              { year: "2024", participated: ["Debate", "Drama", "Sports"] }
+              { class: "5", participated: ["Sports", "Art"] },
+              { class: "6", participated: []},
+              { class: "7", participated: ["Debate", "Drama", "Sports"] },
+              { class: "8", participated: ["Sports", "Art"] }
             ]
           },
 
@@ -650,7 +657,7 @@ const students = [
           { class: "7", scores: [85, 90, 95] },
           {class:  "8", scores:   [65, 56, 89] },
         ],
-        attendance: 90,   // 🟠 <--- Add attendance field
+        attendance: 59,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
               class: "8",
@@ -667,9 +674,11 @@ const students = [
           activityParticipation: {
             availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
             participationHistory: [
-              { year: "2022", participated: ["Sports", "Art"] },
-              { year: "2023", participated: ["Music", "Debate", "Drama"] },
-              { year: "2024", participated: ["Drama", "Sports"] }
+              { class: "5", participated: ["Sports", "Art"] },
+              { class: "6", participated: ["Drama"] },
+              { class: "7", participated: ["Debate", "Sports"] },
+              { class: "8", participated: ["Sports", "Art"] }
+
             ]
           },
 
@@ -797,7 +806,7 @@ const students = [
           { class: "7", scores: [85, 90, 95] },
           {class:  "8", scores:   [65, 56, 89] },
         ],
-        attendance: 85,   // 🟠 <--- Add attendance field
+        attendance: 60,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
               class: "8",
@@ -814,11 +823,12 @@ const students = [
           activityParticipation: {
             availableActivities: ["Sports", "Music", "Debate", "Art", "Drama"],
             participationHistory: [
-              { year: "2022", participated: ["Sports", "Art"] },
-              { year: "2023", participated: ["Drama"] },
-              { year: "2024", participated: ["Debate", "Drama", "Sports"] }
+              { class: "5", participated: ["Sports"] },
+              { class: "6", participated: ["Drama"] },
+              { class: "7", participated: [ "Drama", "Sports"] },
+              { class: "8", participated: ["Sports", "Art"] }
             ]
-          },
+          },          
 
           internalExamScores: {
             Math: {
@@ -936,28 +946,29 @@ const StudentPerformanceDashboard = () => {
       {selectedStudent && (
   <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-6">
     {/* Left: Profile Image + Info */}
-    <div className="flex items-center gap-4">
-      <img
-        src={selectedStudent.image}
-        alt={selectedStudent.name}
-        className="w-24 h-24 rounded-full object-cover"
-      />
-      <div className="text-white">
-        <h3 className="text-xl font-semibold">{selectedStudent.name}</h3>
-        <p className="text-sm">Class: {selectedStudent.class}</p>
-        <p className="text-sm">Section: {selectedStudent.section}</p>
-        <p className="text-sm">Roll No: {selectedStudent.rollNumber}</p>
-      </div>
-    </div>
+    <div className="flex items-center gap-6">
+  <img
+    src={selectedStudent.image}
+    alt={selectedStudent.name}
+    className="w-64 h-64 rounded-full object-cover"
+  />
+  <div className="text-white space-y-2">
+    <h3 className="text-4xl font-bold">{selectedStudent.name}</h3>
+    <p className="text-xl font-semibold">Class: {selectedStudent.class}</p>
+    <p className="text-xl font-semibold">Section: {selectedStudent.section}</p>
+    <p className="text-xl font-semibold">Roll No: {selectedStudent.rollNumber}</p>
+  </div>
+</div>
+
 
     {/* Right: Attendance & Behavior */}
     <div className="flex flex-col sm:flex-row gap-28">
       <div className="text-white">
-        <h3 className="text-md font-semibold mb-2">Attendance</h3>
+        <h3 className="text-md text-center font-semibold mb-4">Attendance</h3>
         <AttendanceIndicator attendancePercentage={selectedStudent.attendance} />
       </div>
       <div className="text-white">
-        <h3 className="text-md font-semibold mb-2">Behavior Ratings</h3>
+        <h3 className="text-md text-center font-semibold mb-2">Behavior Ratings</h3>
         <BehaviorRatingIndicator
           ratingsData={selectedStudent.behaviorRatings}
           studentName={selectedStudent.name}
@@ -984,6 +995,12 @@ const StudentPerformanceDashboard = () => {
           />
         </div>
       )}
+      {selectedStudent && (
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+     <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
+     <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
+  </div>
+)}
 
       {selectedStudent && (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -999,12 +1016,7 @@ const StudentPerformanceDashboard = () => {
 </div>
   
 )}
-{selectedStudent && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-     <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
-     <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
-  </div>
-)}
+
     </div>
   );
 };

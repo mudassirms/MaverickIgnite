@@ -6,6 +6,17 @@ const AttendanceIndicator = ({ attendancePercentage }) => {
   const circumference = 2 * Math.PI * radius;
   const strokeDashoffset = circumference - (attendancePercentage / 100) * circumference;
 
+  // Dynamic color selection based on percentage
+  const getStrokeColor = (percentage) => {
+    if (percentage >= 90) return "#10B981";       // Dark Green
+    if (percentage >= 75) return "#065F46";       // Green
+    if (percentage >= 60) return "#6EE7B7";       // Light Green
+    if (percentage >= 45) return "#FACC15";       // Yellow
+    return "#EF4444";                             // Red
+  };
+
+  const strokeColor = getStrokeColor(attendancePercentage);
+
   return (
     <motion.div
       className="relative w-32 h-32 flex justify-center items-center"
@@ -28,7 +39,7 @@ const AttendanceIndicator = ({ attendancePercentage }) => {
           cx="50"
           cy="50"
           r={radius}
-          stroke="#10B981"
+          stroke={strokeColor}
           strokeWidth={strokeWidth}
           fill="transparent"
           strokeDasharray={circumference}

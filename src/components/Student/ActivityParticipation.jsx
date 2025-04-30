@@ -1,77 +1,94 @@
-
+import { motion } from "framer-motion";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const ActivityParticipationChart = ({ data, studentName }) => {
   const { availableActivities, participationHistory } = data;
 
-  const years = participationHistory.map((entry) => entry.year);
+  // Use class directly for grades
+  const grades = participationHistory.map((entry) => `Grade ${entry.class}`);
   const counts = participationHistory.map((entry) => entry.participated.length);
 
-  const currentYear = Math.max(...participationHistory.map(e => parseInt(e.year)));
-  const currentYearActivities = participationHistory.find(e => parseInt(e.year) === currentYear)?.participated || [];
+  const currentEntry = participationHistory[participationHistory.length - 1];
+  const currentGrade = `Grade ${currentEntry.class}`;
+  const currentActivities = currentEntry.participated || [];
 
   const chartOptions = {
     chart: {
-      type: 'column',
-      backgroundColor: '#1f2937'
+      type: "column",
+      backgroundColor: "transparent",
     },
     title: {
-      text: 'Activity Participation Over the Years',
-      style: { color: '#fff' }
+      text: "Activity Participation by Grade",
+      style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: years,
-      labels: { style: { color: '#ccc' } },
-      title: { text: 'Year', style: { color: '#ccc' } }
+      categories: grades,
+      labels: { style: { color: "#D1D5DB" } },
+      gridLineColor: "#374151",
     },
     yAxis: {
       min: 0,
-      title: { text: 'Number of Activities', style: { color: '#ccc' } },
-      labels: { style: { color: '#ccc' } }
+      title: {
+        text: "Number of Activities",
+        style: { color: "#D1D5DB" },
+      },
+      labels: { style: { color: "#D1D5DB" } },
+      gridLineColor: "#374151",
     },
     legend: {
-      itemStyle: { color: '#ccc' }
+      itemStyle: { color: "#ccc" },
     },
     tooltip: {
-      shared: true,
-      backgroundColor: '#333',
-      style: { color: '#fff' }
+      backgroundColor: "#333",
+      style: { color: "#fff" },
+      formatter: function () {
+        const activities = participationHistory[this.point.index]?.participated || [];
+        const activityList = activities.length ? activities.join(", ") : "No participation";
+    
+        return `<b>Activities Participated: ${this.y}</b><br/>
+                <span style="color:#38bdf8">[${activityList}]</span>`;
+      },
     },
     series: [
       {
-        name: 'Activities Participated',
+        name: "Activities Participated",
         data: counts,
-        color: '#38bdf8'
-      }
-    ]
+        color: "#38bdf8",
+      },
+    ],
+    credits: { enabled: false },
   };
 
   return (
-    <div className="bg-gray-900 text-white p-4 rounded-lg shadow-md">
-      {/* <h3 className="text-xl font-semibold mb-4">Extra-Curricular Activity Participation</h3> */}
-
+    <motion.div
+      className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-4 border border-gray-700"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 }}
+    >
       <HighchartsReact highcharts={Highcharts} options={chartOptions} />
 
-      <div className="mt-4 text-sm space-y-2">
+      <div className="mt-4 text-sm space-y-2 text-white">
         <p>Total Available Activities: <span className="font-semibold">{availableActivities.length}</span></p>
         <p>
-          {studentName} participated in <span className="font-semibold">{currentYearActivities.length}</span> activities in <span className="font-semibold">{currentYear}</span>: 
-          {" "}{currentYearActivities.join(", ")}
+          {studentName} participated in <span className="font-semibold">{currentActivities.length}</span> activities in <span className="font-semibold">{currentGrade}</span>:{" "}
+          {currentActivities.join(", ")}
         </p>
 
         <div className="mt-3 space-y-1">
           <h4 className="font-semibold underline">Participation History:</h4>
           {participationHistory.map((entry) => (
-            <div key={entry.year}>
+            <div key={entry.class}>
               <p>
-                <strong>{entry.year}:</strong> {entry.participated.length > 0 ? entry.participated.join(", ") : "No participation"}
+                <strong>Grade {entry.class}:</strong>{" "}
+                {entry.participated.length > 0 ? entry.participated.join(", ") : "No participation"}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
