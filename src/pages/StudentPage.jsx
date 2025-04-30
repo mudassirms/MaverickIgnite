@@ -18,9 +18,11 @@ import PerformanceByMotherTongue from "../components/Student/PerformanceByMother
 import GenderWisePerformance from "../components/Student/GenderWisePerformance";
 import TopPerformingStudents from "../components/Student/TopPerformingStudent";
 import StudentAttendanceVsMarks from "../components/Student/StudentAttendanceVsMarks";
-// import DropOutRate from "../components/Student/DropOutRate";
 import PassFailRatio from "../components/Student/PassFailRatio";
 import ExtracurricularActivities from "../components/Student/Extraactivties";
+// import IndividualStudentPerformance from "../components/Student/IndividualStudentPerformance"; 
+import StudentPerformanceDashboard from "../components/Student/StudentProfileDashboard";
+
 
 const totalStats = {
   totalStudents: "1,250",
@@ -89,6 +91,10 @@ const StudentPage = () => {
           <StatCard name='Dropout Rate' icon={TrendingUp} value={studentStats.dropoutRate} color='#F59E0B' />
           <StatCard name='Top Performers' icon={GraduationCap} value={studentStats.topPerformers} color='#EF4444' />
         </motion.div>
+
+        <div className="mb-8">
+    <StudentPerformanceDashboard />
+  </div>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
           <AverageMarksByClass year={selectedYear} grade={selectedGrade} />
