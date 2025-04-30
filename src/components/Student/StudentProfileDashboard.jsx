@@ -28,12 +28,12 @@ const students = [
       ],
 
       finalExamScores: {
-        Math: { "Class 5": 48, "Class 6": 53, "Class 7": 60, "Class 8": 80 },
-        Science: { "Class 5": 62, "Class 6": 68, "Class 7": 70, "Class 8": 80 },
-        English: { "Class 5": 85, "Class 6": 80, "Class 7": 88, "Class 8": 95 },
-        History: { "Class 5": 47, "Class 6": 52, "Class 7": 73, "Class 8": 80 },
-        Geography: { "Class 5": 45, "Class 6": 50, "Class 7": 68, "Class 8": 82 },
-        Computer: { "Class 5": 40, "Class 6": 54, "Class 7": 70, "Class 8": 81 }, 
+        Math: { "Grade 5": 48, "Grade 6": 53, "Grade 7": 60, "Grade 8": 80 },
+        Science: { "Grade 5": 62, "Grade 6": 68, "Grade 7": 70, "Grade 8": 80 },
+        English: { "Grade 5": 85, "Grade 6": 80, "Grade 7": 88, "Grade 8": 95 },
+        History: { "Grade 5": 47, "Grade 6": 52, "Grade 7": 73, "Grade 8": 80 },
+        Geography: { "Grade 5": 45, "Grade 6": 50, "Grade 7": 68, "Grade 8": 82 },
+        Computer: { "Grade 5": 40, "Grade 6": 54, "Grade 7": 70, "Grade 8": 81 }, 
 
 
       },
@@ -53,7 +53,7 @@ const students = [
       attendance: 95,
       behaviorRatings: [
         {
-          class: "8",
+          class: "9",
           ratings: [
             { subject: "Math", rating: 4 },
             { subject: "Science", rating: 5 },
@@ -76,89 +76,89 @@ const students = [
       }, 
       internalExamScores: {
         Math: {
-          "Class 5 - Pre Mid Term": 41,
-          "Class 5 - Mid Term": 49,
-          "Class 5 - Post Mid Term": 50,
-          "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 62,
-          "Class 6 - Post Mid Term": 75,
-          "Class 7 - Pre Mid Term": 59,
-          "Class 7 - Mid Term": 62,
-          "Class 7 - Post Mid Term": 68,
-          "Class 8 - Pre Mid Term": 70,
-          "Class 8 - Mid Term": 72,
-          "Class 8 - Post Mid Term": 80,
+          "Grade 5 - Pre Mid Term": 41,
+          "Grade 5 - Mid Term": 49,
+          "Grade 5 - Post Mid Term": 50,
+          "Grade 6 - Pre Mid Term": 60,
+          "Grade 6 - Mid Term": 62,
+          "Grade 6 - Post Mid Term": 75,
+          "Grade 7 - Pre Mid Term": 59,
+          "Grade 7 - Mid Term": 62,
+          "Grade 7 - Post Mid Term": 68,
+          "Grade 8 - Pre Mid Term": 70,
+          "Grade 8 - Mid Term": 72,
+          "Grade 8 - Post Mid Term": 80,
         },
         Science: {
-          "Class 5 - Pre Mid Term": 50,
-          "Class 5 - Mid Term": 60,
-          "Class 5 - Post Mid Term": 65,
-          "Class 6 - Pre Mid Term": 75,
-          "Class 6 - Mid Term": 74,
-          "Class 6 - Post Mid Term": 80,
-          "Class 7 - Pre Mid Term": 49,
-          "Class 7 - Mid Term": 58,
-          "Class 7 - Post Mid Term": 62,
-          "Class 8 - Pre Mid Term": 58,
-          "Class 8 - Mid Term": 60,
-          "Class 8 - Post Mid Term": 69,
+          "Grade 5 - Pre Mid Term": 50,
+          "Grade 5 - Mid Term": 60,
+          "Grade 5 - Post Mid Term": 65,
+          "Grade 6 - Pre Mid Term": 75,
+          "Grade 6 - Mid Term": 74,
+          "Grade 6 - Post Mid Term": 80,
+          "Grade 7 - Pre Mid Term": 49,
+          "Grade 7 - Mid Term": 58,
+          "Grade 7 - Post Mid Term": 62,
+          "Grade 8 - Pre Mid Term": 58,
+          "Grade 8 - Mid Term": 60,
+          "Grade 8 - Post Mid Term": 69,
         },
         English: {
-          "Class 5 - Pre Mid Term": 90,
-          "Class 5 - Mid Term": 65,
-          "Class 5 - Post Mid Term": 70,
-          "Class 6 - Pre Mid Term": 85,
-          "Class 6 - Mid Term": 88,
-          "Class 6 - Post Mid Term": 90,
-          "Class 7 - Pre Mid Term": 85,
-          "Class 7 - Mid Term": 88,
-          "Class 7 - Post Mid Term": 90,
-          "Class 8 - Pre Mid Term": 78,
-          "Class 8 - Mid Term": 79,
-          "Class 8 - Post Mid Term": 80,
+          "Grade 5 - Pre Mid Term": 90,
+          "Grade 5 - Mid Term": 65,
+          "Grade 5 - Post Mid Term": 70,
+          "Grade 6 - Pre Mid Term": 85,
+          "Grade 6 - Mid Term": 88,
+          "Grade 6 - Post Mid Term": 90,
+          "Grade 7 - Pre Mid Term": 85,
+          "Grade 7 - Mid Term": 88,
+          "Grade 7 - Post Mid Term": 90,
+          "Grade 8 - Pre Mid Term": 78,
+          "Grade 8 - Mid Term": 79,
+          "Grade 8 - Post Mid Term": 80,
 
         },
         History: {
-            "Class 5 - Pre Mid Term": 45,
-            "Class 5 - Mid Term": 51,
-            "Class 5 - Post Mid Term": 52,
-            "Class 6 - Pre Mid Term": 49,
-            "Class 6 - Mid Term": 56,
-            "Class 6 - Post Mid Term": 65,
-            "Class 7 - Pre Mid Term": 64,
-            "Class 7 - Mid Term": 68,
-            "Class 7 - Post Mid Term": 70,
-            "Class 8 - Pre Mid Term": 74,
-            "Class 8 - Mid Term": 74,
-            "Class 8 - Post Mid Term": 70,
+            "Grade 5 - Pre Mid Term": 45,
+            "Grade 5 - Mid Term": 51,
+            "Grade 5 - Post Mid Term": 52,
+            "Grade 6 - Pre Mid Term": 49,
+            "Grade 6 - Mid Term": 56,
+            "Grade 6 - Post Mid Term": 65,
+            "Grade 7 - Pre Mid Term": 64,
+            "Grade 7 - Mid Term": 68,
+            "Grade 7 - Post Mid Term": 70,
+            "Grade 8 - Pre Mid Term": 74,
+            "Grade 8 - Mid Term": 74,
+            "Grade 8 - Post Mid Term": 70,
           },
           Geography: {
-            "Class 5 - Pre Mid Term": 45,
-            "Class 5 - Mid Term": 51,
-            "Class 5 - Post Mid Term": 60,
-            "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 75,
-            "Class 6 - Post Mid Term": 80,
-            "Class 7 - Pre Mid Term": 60,
-            "Class 7 - Mid Term": 75,
-            "Class 7 - Post Mid Term": 80,
-            "Class 8 - Pre Mid Term": 75,
-            "Class 8 - Mid Term": 80,
-            "Class 8 - Post Mid Term": 81,
+            "Grade 5 - Pre Mid Term": 45,
+            "Grade 5 - Mid Term": 51,
+            "Grade 5 - Post Mid Term": 60,
+            "Grade 6 - Pre Mid Term": 60,
+            "Grade 6 - Mid Term": 75,
+            "Grade 6 - Post Mid Term": 80,
+            "Grade 7 - Pre Mid Term": 60,
+            "Grade 7 - Mid Term": 75,
+            "Grade 7 - Post Mid Term": 80,
+            "Grade 8 - Pre Mid Term": 75,
+            "Grade 8 - Mid Term": 80,
+            "Grade 8 - Post Mid Term": 81,
           },
           Computer: {
-            "Class 5 - Pre Mid Term": 45,
-            "Class 5 - Mid Term": 51,
-            "Class 5 - Post Mid Term": 60,
-            "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 65,
-            "Class 6 - Post Mid Term": 70,
-            "Class 7 - Pre Mid Term": 69,
-            "Class 7 - Mid Term": 74,
-            "Class 7 - Post Mid Term": 78,
-            "Class 8 - Pre Mid Term": 75,
-            "Class 8 - Mid Term": 78,
-            "Class 8 - Post Mid Term": 80,
+            "Grade 5 - Pre Mid Term": 45,
+            "Grade 5 - Mid Term": 51,
+            "Grade 5 - Post Mid Term": 60,
+            "Grade 6 - Pre Mid Term": 60,
+            "Grade 6 - Mid Term": 65,
+            "Grade 6 - Post Mid Term": 70,
+            "Grade 7 - Pre Mid Term": 69,
+            "Grade 7 - Mid Term": 74,
+            "Grade 7 - Post Mid Term": 78,
+            "Grade 8 - Pre Mid Term": 75,
+            "Grade 8 - Mid Term": 78,
+            "Grade 8 - Post Mid Term": 80,
           },
       },
       
@@ -182,12 +182,12 @@ const students = [
       ],
 
       finalExamScores: {
-        Math: { "Class 5": 83, "Class 6": 81, "Class 7": 87, "Class 8": 90 },
-        Science: { "Class 5": 77, "Class 6": 74, "Class 7": 80, "Class 8": 84 },
-        English: { "Class 5": 90, "Class 6": 88, "Class 7": 91, "Class 8": 93 },
-        History: { "Class 5": 68, "Class 6": 71, "Class 7": 75, "Class 8": 79 },
-        Geography: { "Class 5": 58, "Class 6": 56, "Class 7": 65, "Class 8": 75 },
-        Computer: { "Class 5": 49, "Class 6": 61, "Class 7": 73, "Class 8": 80 },
+        Math: { "Grade 5": 83, "Grade 6": 81, "Grade 7": 87, "Grade 8": 90 },
+        Science: { "Grade 5": 77, "Grade 6": 74, "Grade 7": 80, "Grade 8": 84 },
+        English: { "Grade 5": 90, "Grade 6": 88, "Grade 7": 91, "Grade 8": 93 },
+        History: { "Grade 5": 68, "Grade 6": 71, "Grade 7": 75, "Grade 8": 79 },
+        Geography: { "Grade 5": 58, "Grade 6": 56, "Grade 7": 65, "Grade 8": 75 },
+        Computer: { "Grade 5": 49, "Grade 6": 61, "Grade 7": 73, "Grade 8": 80 },
       },
 
       finalExamPerformance: [
@@ -205,7 +205,7 @@ const students = [
       attendance: 85,   // 🟠 <--- Add attendance field
       behaviorRatings: [
         {
-          class: "8",
+          class: "9",
           ratings: [
             { subject: "Math", rating: 4.5 },
             { subject: "Science", rating: 5 },
@@ -228,88 +228,88 @@ const students = [
       },
       internalExamScores: {
         Math: {
-          "Class 5 - Pre Mid Term": 73,
-          "Class 5 - Mid Term": 70,
-          "Class 5 - Post Mid Term": 77,
-          "Class 6 - Pre Mid Term": 65,
-          "Class 6 - Mid Term": 60,
-          "Class 6 - Post Mid Term": 68,
-          "Class 7 - Pre Mid Term": 80,
-          "Class 7 - Mid Term": 89,
-          "Class 7 - Post Mid Term": 85,
-          "Class 8 - Pre Mid Term": 65,
-          "Class 8 - Mid Term": 75,
-          "Class 8 - Post Mid Term": 85,
+          "Grade 5 - Pre Mid Term": 73,
+          "Grade 5 - Mid Term": 70,
+          "Grade 5 - Post Mid Term": 77,
+          "Grade 6 - Pre Mid Term": 65,
+          "Grade 6 - Mid Term": 60,
+          "Grade 6 - Post Mid Term": 68,
+          "Grade 7 - Pre Mid Term": 80,
+          "Grade 7 - Mid Term": 89,
+          "Grade 7 - Post Mid Term": 85,
+          "Grade 8 - Pre Mid Term": 65,
+          "Grade 8 - Mid Term": 75,
+          "Grade 8 - Post Mid Term": 85,
         },
         Science: {
-          "Class 5 - Pre Mid Term": 78,
-          "Class 5 - Mid Term": 87,
-          "Class 5 - Post Mid Term": 79,
-          "Class 6 - Pre Mid Term": 65,
-          "Class 6 - Mid Term": 60,
-          "Class 6 - Post Mid Term": 68,
-          "Class 7 - Pre Mid Term": 65,
-          "Class 7 - Mid Term": 80,
-          "Class 7 - Post Mid Term": 89,
-          "Class 8 - Pre Mid Term": 98,
-          "Class 8 - Mid Term": 89,
-          "Class 8 - Post Mid Term": 90,
+          "Grade 5 - Pre Mid Term": 78,
+          "Grade 5 - Mid Term": 87,
+          "Grade 5 - Post Mid Term": 79,
+          "Grade 6 - Pre Mid Term": 65,
+          "Grade 6 - Mid Term": 60,
+          "Grade 6 - Post Mid Term": 68,
+          "Grade 7 - Pre Mid Term": 65,
+          "Grade 7 - Mid Term": 80,
+          "Grade 7 - Post Mid Term": 89,
+          "Grade 8 - Pre Mid Term": 98,
+          "Grade 8 - Mid Term": 89,
+          "Grade 8 - Post Mid Term": 90,
         },
         English: {
-         "Class 5 - Pre Mid Term": 73,
-          "Class 5 - Mid Term": 70,
-          "Class 5 - Post Mid Term": 77,
-          "Class 6 - Pre Mid Term": 80,
-          "Class 6 - Mid Term": 60,
-          "Class 6 - Post Mid Term": 50,
-          "Class 7 - Pre Mid Term": 60,
-          "Class 7 - Mid Term": 60,
-          "Class 7 - Post Mid Term": 70,
-          "Class 8 - Pre Mid Term": 60,
-          "Class 8 - Mid Term": 80,
-          "Class 8 - Post Mid Term": 90,
+         "Grade 5 - Pre Mid Term": 73,
+          "Grade 5 - Mid Term": 70,
+          "Grade 5 - Post Mid Term": 77,
+          "Grade 6 - Pre Mid Term": 80,
+          "Grade 6 - Mid Term": 60,
+          "Grade 6 - Post Mid Term": 50,
+          "Grade 7 - Pre Mid Term": 60,
+          "Grade 7 - Mid Term": 60,
+          "Grade 7 - Post Mid Term": 70,
+          "Grade 8 - Pre Mid Term": 60,
+          "Grade 8 - Mid Term": 80,
+          "Grade 8 - Post Mid Term": 90,
         },
         History: {
-         "Class 5 - Pre Mid Term": 73,
-          "Class 5 - Mid Term": 70,
-          "Class 5 - Post Mid Term": 77,
-          "Class 6 - Pre Mid Term": 65,
-          "Class 6 - Mid Term": 60,
-          "Class 6 - Post Mid Term": 68,
-          "Class 7 - Pre Mid Term": 65,
-          "Class 7 - Mid Term": 60,
-          "Class 7 - Post Mid Term": 68,
-          "Class 8 - Pre Mid Term": 65,
-          "Class 8 - Mid Term": 80,
-          "Class 8 - Post Mid Term": 90,
+         "Grade 5 - Pre Mid Term": 73,
+          "Grade 5 - Mid Term": 70,
+          "Grade 5 - Post Mid Term": 77,
+          "Grade 6 - Pre Mid Term": 65,
+          "Grade 6 - Mid Term": 60,
+          "Grade 6 - Post Mid Term": 68,
+          "Grade 7 - Pre Mid Term": 65,
+          "Grade 7 - Mid Term": 60,
+          "Grade 7 - Post Mid Term": 68,
+          "Grade 8 - Pre Mid Term": 65,
+          "Grade 8 - Mid Term": 80,
+          "Grade 8 - Post Mid Term": 90,
         },
         Geography: {
-            "Class 5 - Pre Mid Term": 65,
-             "Class 5 - Mid Term": 69,
-             "Class 5 - Post Mid Term": 70,
-             "Class 6 - Pre Mid Term": 71,
-             "Class 6 - Mid Term": 69,
-             "Class 6 - Post Mid Term": 74,
-             "Class 7 - Pre Mid Term": 70,
-             "Class 7 - Mid Term": 74,
-             "Class 7 - Post Mid Term": 73,
-             "Class 8 - Pre Mid Term": 69,
-             "Class 8 - Mid Term": 68,
-             "Class 8 - Post Mid Term": 75,
+            "Grade 5 - Pre Mid Term": 65,
+             "Grade 5 - Mid Term": 69,
+             "Grade 5 - Post Mid Term": 70,
+             "Grade 6 - Pre Mid Term": 71,
+             "Grade 6 - Mid Term": 69,
+             "Grade 6 - Post Mid Term": 74,
+             "Grade 7 - Pre Mid Term": 70,
+             "Grade 7 - Mid Term": 74,
+             "Grade 7 - Post Mid Term": 73,
+             "Grade 8 - Pre Mid Term": 69,
+             "Grade 8 - Mid Term": 68,
+             "Grade 8 - Post Mid Term": 75,
            },
            Computer: {
-            "Class 5 - Pre Mid Term": 74,
-             "Class 5 - Mid Term": 69,
-             "Class 5 - Post Mid Term": 69,
-             "Class 6 - Pre Mid Term": 70,
-             "Class 6 - Mid Term": 80,
-             "Class 6 - Post Mid Term": 69,
-             "Class 7 - Pre Mid Term": 73,
-             "Class 7 - Mid Term": 79,
-             "Class 7 - Post Mid Term": 84,
-             "Class 8 - Pre Mid Term": 65,
-             "Class 8 - Mid Term": 80,
-             "Class 8 - Post Mid Term": 90,
+            "Grade 5 - Pre Mid Term": 74,
+             "Grade 5 - Mid Term": 69,
+             "Grade 5 - Post Mid Term": 69,
+             "Grade 6 - Pre Mid Term": 70,
+             "Grade 6 - Mid Term": 80,
+             "Grade 6 - Post Mid Term": 69,
+             "Grade 7 - Pre Mid Term": 73,
+             "Grade 7 - Mid Term": 79,
+             "Grade 7 - Post Mid Term": 84,
+             "Grade 8 - Pre Mid Term": 65,
+             "Grade 8 - Mid Term": 80,
+             "Grade 8 - Post Mid Term": 90,
            },
       },
       
@@ -333,12 +333,12 @@ const students = [
           ],
 
           finalExamScores: {
-            Math: { "Class 5": 48, "Class 6": 53, "Class 7": 60, "Class 8": 80 },
-            Science: { "Class 5": 35, "Class 6": 59, "Class 7": 75, "Class 8": 79 },
-            English: { "Class 5": 40, "Class 6": 57, "Class 7": 65, "Class 8": 81 },
-            History: { "Class 5": 47, "Class 6": 52, "Class 7": 73, "Class 8": 80 },
-            Geography: { "Class 5": 45, "Class 6": 50, "Class 7": 68, "Class 8": 82 },
-            Computer: { "Class 5": 40, "Class 6": 54, "Class 7": 70, "Class 8": 81 }, 
+            Math: { "Grade 5": 48, "Grade 6": 53, "Grade 7": 60, "Grade 8": 80 },
+            Science: { "Grade 5": 35, "Grade 6": 59, "Grade 7": 75, "Grade 8": 79 },
+            English: { "Grade 5": 40, "Grade 6": 57, "Grade 7": 65, "Grade 8": 81 },
+            History: { "Grade 5": 47, "Grade 6": 52, "Grade 7": 73, "Grade 8": 80 },
+            Geography: { "Grade 5": 45, "Grade 6": 50, "Grade 7": 68, "Grade 8": 82 },
+            Computer: { "Grade 5": 40, "Grade 6": 54, "Grade 7": 70, "Grade 8": 81 }, 
         },
 
         finalExamPerformance: [
@@ -356,7 +356,7 @@ const students = [
         attendance: 72,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
-            //   class: "8",
+              class: "9",
               ratings: [
                 { subject: "Math", rating: 5 },
                 { subject: "Science", rating: 4.5 },
@@ -379,88 +379,88 @@ const students = [
           },
           internalExamScores: {
             Math: {
-              "Class 5 - Pre Mid Term": 70,
-          "Class 5 - Mid Term": 74,
-          "Class 5 - Post Mid Term": 70,
-          "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 56,
-          "Class 6 - Post Mid Term": 68,
-          "Class 7 - Pre Mid Term": 69,
-          "Class 7 - Mid Term": 70,
-          "Class 7 - Post Mid Term": 74,
-          "Class 8 - Pre Mid Term": 74,
-          "Class 8 - Mid Term": 68,
-          "Class 8 - Post Mid Term": 74,
+              "Grade 5 - Pre Mid Term": 70,
+          "Grade 5 - Mid Term": 74,
+          "Grade 5 - Post Mid Term": 70,
+          "Grade 6 - Pre Mid Term": 60,
+          "Grade 6 - Mid Term": 56,
+          "Grade 6 - Post Mid Term": 68,
+          "Grade 7 - Pre Mid Term": 69,
+          "Grade 7 - Mid Term": 70,
+          "Grade 7 - Post Mid Term": 74,
+          "Grade 8 - Pre Mid Term": 74,
+          "Grade 8 - Mid Term": 68,
+          "Grade 8 - Post Mid Term": 74,
             },
             Science: {
-              "Class 5 - Pre Mid Term": 33,
-          "Class 5 - Mid Term": 40,
-          "Class 5 - Post Mid Term": 56,
-          "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 62,
-          "Class 6 - Post Mid Term": 64,
-          "Class 7 - Pre Mid Term": 39,
-          "Class 7 - Mid Term": 57,
-          "Class 7 - Post Mid Term": 70,
-          "Class 8 - Pre Mid Term": 70,
-          "Class 8 - Mid Term": 72,
-          "Class 8 - Post Mid Term": 80,
+              "Grade 5 - Pre Mid Term": 33,
+          "Grade 5 - Mid Term": 40,
+          "Grade 5 - Post Mid Term": 56,
+          "Grade 6 - Pre Mid Term": 60,
+          "Grade 6 - Mid Term": 62,
+          "Grade 6 - Post Mid Term": 64,
+          "Grade 7 - Pre Mid Term": 39,
+          "Grade 7 - Mid Term": 57,
+          "Grade 7 - Post Mid Term": 70,
+          "Grade 8 - Pre Mid Term": 70,
+          "Grade 8 - Mid Term": 72,
+          "Grade 8 - Post Mid Term": 80,
             },
             English: {
-             "Class 5 - Pre Mid Term": 81,
-          "Class 5 - Mid Term": 70,
-          "Class 5 - Post Mid Term": 77,
-          "Class 6 - Pre Mid Term": 65,
-          "Class 6 - Mid Term": 76,
-          "Class 6 - Post Mid Term": 80,
-          "Class 7 - Pre Mid Term": 75,
-          "Class 7 - Mid Term": 74,
-          "Class 7 - Post Mid Term": 78,
-          "Class 8 - Pre Mid Term": 80,
-          "Class 8 - Mid Term": 81,
-          "Class 8 - Post Mid Term": 85,
+             "Grade 5 - Pre Mid Term": 81,
+          "Grade 5 - Mid Term": 70,
+          "Grade 5 - Post Mid Term": 77,
+          "Grade 6 - Pre Mid Term": 65,
+          "Grade 6 - Mid Term": 76,
+          "Grade 6 - Post Mid Term": 80,
+          "Grade 7 - Pre Mid Term": 75,
+          "Grade 7 - Mid Term": 74,
+          "Grade 7 - Post Mid Term": 78,
+          "Grade 8 - Pre Mid Term": 80,
+          "Grade 8 - Mid Term": 81,
+          "Grade 8 - Post Mid Term": 85,
             },
             History: {
-             "Class 5 - Pre Mid Term": 73,
-          "Class 5 - Mid Term": 80,
-          "Class 5 - Post Mid Term": 85,
-          "Class 6 - Pre Mid Term": 78,
-          "Class 6 - Mid Term": 87,
-          "Class 6 - Post Mid Term": 47,
-          "Class 7 - Pre Mid Term": 65,
-          "Class 7 - Mid Term": 80,
-          "Class 7 - Post Mid Term": 68,
-          "Class 8 - Pre Mid Term": 65,
-          "Class 8 - Mid Term": 80,
-          "Class 8 - Post Mid Term": 90,
+             "Grade 5 - Pre Mid Term": 73,
+          "Grade 5 - Mid Term": 80,
+          "Grade 5 - Post Mid Term": 85,
+          "Grade 6 - Pre Mid Term": 78,
+          "Grade 6 - Mid Term": 87,
+          "Grade 6 - Post Mid Term": 47,
+          "Grade 7 - Pre Mid Term": 65,
+          "Grade 7 - Mid Term": 80,
+          "Grade 7 - Post Mid Term": 68,
+          "Grade 8 - Pre Mid Term": 65,
+          "Grade 8 - Mid Term": 80,
+          "Grade 8 - Post Mid Term": 90,
             },
             Geography: {
-                "Class 5 - Pre Mid Term": 80,
-                 "Class 5 - Mid Term": 74,
-                 "Class 5 - Post Mid Term": 75,
-                 "Class 6 - Pre Mid Term": 60,
-                 "Class 6 - Mid Term": 63,
-                 "Class 6 - Post Mid Term": 69,
-                 "Class 7 - Pre Mid Term": 70,
-                 "Class 7 - Mid Term": 71,
-                 "Class 7 - Post Mid Term": 72,
-                 "Class 8 - Pre Mid Term": 76,
-                 "Class 8 - Mid Term": 80,
-                 "Class 8 - Post Mid Term": 90,
+                "Grade 5 - Pre Mid Term": 80,
+                 "Grade 5 - Mid Term": 74,
+                 "Grade 5 - Post Mid Term": 75,
+                 "Grade 6 - Pre Mid Term": 60,
+                 "Grade 6 - Mid Term": 63,
+                 "Grade 6 - Post Mid Term": 69,
+                 "Grade 7 - Pre Mid Term": 70,
+                 "Grade 7 - Mid Term": 71,
+                 "Grade 7 - Post Mid Term": 72,
+                 "Grade 8 - Pre Mid Term": 76,
+                 "Grade 8 - Mid Term": 80,
+                 "Grade 8 - Post Mid Term": 90,
                },
                Computer: {
-                "Class 5 - Pre Mid Term": 74,
-                 "Class 5 - Mid Term": 80,
-                 "Class 5 - Post Mid Term": 82,
-                 "Class 6 - Pre Mid Term": 86,
-                 "Class 6 - Mid Term": 83,
-                 "Class 6 - Post Mid Term": 76,
-                 "Class 7 - Pre Mid Term": 75,
-                 "Class 7 - Mid Term": 75,
-                 "Class 7 - Post Mid Term": 78,
-                 "Class 8 - Pre Mid Term": 84,
-                 "Class 8 - Mid Term": 86,
-                 "Class 8 - Post Mid Term": 92,
+                "Grade 5 - Pre Mid Term": 74,
+                 "Grade 5 - Mid Term": 80,
+                 "Grade 5 - Post Mid Term": 82,
+                 "Grade 6 - Pre Mid Term": 86,
+                 "Grade 6 - Mid Term": 83,
+                 "Grade 6 - Post Mid Term": 76,
+                 "Grade 7 - Pre Mid Term": 75,
+                 "Grade 7 - Mid Term": 75,
+                 "Grade 7 - Post Mid Term": 78,
+                 "Grade 8 - Pre Mid Term": 84,
+                 "Grade 8 - Mid Term": 86,
+                 "Grade 8 - Post Mid Term": 92,
                },
           },
           
@@ -484,12 +484,12 @@ const students = [
           ],
 
           finalExamScores: {
-            Math: { "Class 5": 48, "Class 6": 53, "Class 7": 60, "Class 8": 80 },
-            Science: { "Class 5": 35, "Class 6": 59, "Class 7": 70, "Class 8": 79 },
-            English: { "Class 5": 40, "Class 6": 57, "Class 7": 65, "Class 8": 81 },
-            History: { "Class 5": 47, "Class 6": 52, "Class 7": 73, "Class 8": 80 },
-            Geography: { "Class 5": 45, "Class 6": 50, "Class 7": 68, "Class 8": 82 },
-            Computer: { "Class 5": 40, "Class 6": 54, "Class 7": 70, "Class 8": 81 }, 
+            Math: { "Grade 5": 48, "Grade 6": 53, "Grade 7": 60, "Grade 8": 80 },
+            Science: { "Grade 5": 35, "Grade 6": 59, "Grade 7": 70, "Grade 8": 79 },
+            English: { "Grade 5": 40, "Grade 6": 57, "Grade 7": 65, "Grade 8": 81 },
+            History: { "Grade 5": 47, "Grade 6": 52, "Grade 7": 73, "Grade 8": 80 },
+            Geography: { "Grade 5": 45, "Grade 6": 50, "Grade 7": 68, "Grade 8": 82 },
+            Computer: { "Grade 5": 40, "Grade 6": 54, "Grade 7": 70, "Grade 8": 81 }, 
           },
 
 
@@ -508,7 +508,7 @@ const students = [
         attendance: 48,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
-              class: "8",
+              class: "9",
               ratings: [
                 { subject: "Math", rating: 5 },
                 { subject: "Science", rating: 5 },
@@ -531,89 +531,89 @@ const students = [
 
           internalExamScores: {
             Math: {
-          "Class 5 - Pre Mid Term": 53,
-          "Class 5 - Mid Term": 52,
-          "Class 5 - Post Mid Term": 55,
-          "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 61,
-          "Class 6 - Post Mid Term": 65,
-          "Class 7 - Pre Mid Term": 69,
-          "Class 7 - Mid Term": 68,
-          "Class 7 - Post Mid Term": 69,
-          "Class 8 - Pre Mid Term": 71,
-          "Class 8 - Mid Term": 70,
-          "Class 8 - Post Mid Term": 85,
+          "Grade 5 - Pre Mid Term": 53,
+          "Grade 5 - Mid Term": 52,
+          "Grade 5 - Post Mid Term": 55,
+          "Grade 6 - Pre Mid Term": 60,
+          "Grade 6 - Mid Term": 61,
+          "Grade 6 - Post Mid Term": 65,
+          "Grade 7 - Pre Mid Term": 69,
+          "Grade 7 - Mid Term": 68,
+          "Grade 7 - Post Mid Term": 69,
+          "Grade 8 - Pre Mid Term": 71,
+          "Grade 8 - Mid Term": 70,
+          "Grade 8 - Post Mid Term": 85,
             },
          Science: {
-             "Class 5 - Pre Mid Term": 78,
-             "Class 5 - Mid Term": 80,
-             "Class 5 - Post Mid Term": 78,
-             "Class 6 - Pre Mid Term": 87,
-             "Class 6 - Mid Term": 65,
-             "Class 6 - Post Mid Term": 69,
-             "Class 7 - Pre Mid Term": 70,
-             "Class 7 - Mid Term": 72,
-             "Class 7 - Post Mid Term": 74,
-             "Class 8 - Pre Mid Term": 65,
-             "Class 8 - Mid Term": 58,
-             "Class 8 - Post Mid Term": 62,
+             "Grade 5 - Pre Mid Term": 78,
+             "Grade 5 - Mid Term": 80,
+             "Grade 5 - Post Mid Term": 78,
+             "Grade 6 - Pre Mid Term": 87,
+             "Grade 6 - Mid Term": 65,
+             "Grade 6 - Post Mid Term": 69,
+             "Grade 7 - Pre Mid Term": 70,
+             "Grade 7 - Mid Term": 72,
+             "Grade 7 - Post Mid Term": 74,
+             "Grade 8 - Pre Mid Term": 65,
+             "Grade 8 - Mid Term": 58,
+             "Grade 8 - Post Mid Term": 62,
             },
          English: {
-            "Class 5 - Pre Mid Term": 80,
-            "Class 5 - Mid Term": 85,
-            "Class 5 - Post Mid Term": 78,
-            "Class 6 - Pre Mid Term": 87,
-            "Class 6 - Mid Term": 78,
-            "Class 6 - Post Mid Term": 80,
-            "Class 7 - Pre Mid Term": 82,
-            "Class 7 - Mid Term": 78,
-            "Class 7 - Post Mid Term": 70,
-            "Class 8 - Pre Mid Term": 65,
-            "Class 8 - Mid Term": 45,
-            "Class 8 - Post Mid Term": 62,
+            "Grade 5 - Pre Mid Term": 80,
+            "Grade 5 - Mid Term": 85,
+            "Grade 5 - Post Mid Term": 78,
+            "Grade 6 - Pre Mid Term": 87,
+            "Grade 6 - Mid Term": 78,
+            "Grade 6 - Post Mid Term": 80,
+            "Grade 7 - Pre Mid Term": 82,
+            "Grade 7 - Mid Term": 78,
+            "Grade 7 - Post Mid Term": 70,
+            "Grade 8 - Pre Mid Term": 65,
+            "Grade 8 - Mid Term": 45,
+            "Grade 8 - Post Mid Term": 62,
             },
          History: {
-            "Class 5 - Pre Mid Term": 53,
-            "Class 5 - Mid Term": 52,
-            "Class 5 - Post Mid Term": 55,
-            "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 61,
-            "Class 6 - Post Mid Term": 65,
-            "Class 7 - Pre Mid Term": 69,
-            "Class 7 - Mid Term": 68,
-            "Class 7 - Post Mid Term": 69,
-            "Class 8 - Pre Mid Term": 71,
-            "Class 8 - Mid Term": 70,
-            "Class 8 - Post Mid Term": 85,
+            "Grade 5 - Pre Mid Term": 53,
+            "Grade 5 - Mid Term": 52,
+            "Grade 5 - Post Mid Term": 55,
+            "Grade 6 - Pre Mid Term": 60,
+            "Grade 6 - Mid Term": 61,
+            "Grade 6 - Post Mid Term": 65,
+            "Grade 7 - Pre Mid Term": 69,
+            "Grade 7 - Mid Term": 68,
+            "Grade 7 - Post Mid Term": 69,
+            "Grade 8 - Pre Mid Term": 71,
+            "Grade 8 - Mid Term": 70,
+            "Grade 8 - Post Mid Term": 85,
           },
 
          Geography: {
-            "Class 5 - Pre Mid Term": 53,
-            "Class 5 - Mid Term": 52,
-            "Class 5 - Post Mid Term": 55,
-            "Class 6 - Pre Mid Term": 60,
-            "Class 6 - Mid Term": 61,
-            "Class 6 - Post Mid Term": 65,
-            "Class 7 - Pre Mid Term": 69,
-            "Class 7 - Mid Term": 68,
-            "Class 7 - Post Mid Term": 69,
-            "Class 8 - Pre Mid Term": 71,
-            "Class 8 - Mid Term": 70,
-            "Class 8 - Post Mid Term": 85,
+            "Grade 5 - Pre Mid Term": 53,
+            "Grade 5 - Mid Term": 52,
+            "Grade 5 - Post Mid Term": 55,
+            "Grade 6 - Pre Mid Term": 60,
+            "Grade 6 - Mid Term": 61,
+            "Grade 6 - Post Mid Term": 65,
+            "Grade 7 - Pre Mid Term": 69,
+            "Grade 7 - Mid Term": 68,
+            "Grade 7 - Post Mid Term": 69,
+            "Grade 8 - Pre Mid Term": 71,
+            "Grade 8 - Mid Term": 70,
+            "Grade 8 - Post Mid Term": 85,
             },
             Computer: {
-                "Class 5 - Pre Mid Term": 53,
-                "Class 5 - Mid Term": 52,
-                "Class 5 - Post Mid Term": 55,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 61,
-                "Class 6 - Post Mid Term": 65,
-                "Class 7 - Pre Mid Term": 69,
-                "Class 7 - Mid Term": 68,
-                "Class 7 - Post Mid Term": 69,
-                "Class 8 - Pre Mid Term": 71,
-                "Class 8 - Mid Term": 70,
-                "Class 8 - Post Mid Term": 85,
+                "Grade 5 - Pre Mid Term": 53,
+                "Grade 5 - Mid Term": 52,
+                "Grade 5 - Post Mid Term": 55,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 61,
+                "Grade 6 - Post Mid Term": 65,
+                "Grade 7 - Pre Mid Term": 69,
+                "Grade 7 - Mid Term": 68,
+                "Grade 7 - Post Mid Term": 69,
+                "Grade 8 - Pre Mid Term": 71,
+                "Grade 8 - Mid Term": 70,
+                "Grade 8 - Post Mid Term": 85,
                   },
           },
           
@@ -638,12 +638,12 @@ const students = [
           ],
 
           finalExamScores: {
-            Math: { "Class 5": 83, "Class 6": 81, "Class 7": 87, "Class 8": 90 },
-            Science: { "Class 5": 77, "Class 6": 74, "Class 7": 80, "Class 8": 84 },
-            English: { "Class 5": 90, "Class 6": 88, "Class 7": 91, "Class 8": 93 },
-            History: { "Class 5": 70, "Class 6": 78, "Class 7": 80, "Class 8": 90 },
-            Geography: { "Class 5": 75, "Class 6": 70, "Class 7": 73, "Class 8": 79 },
-            Computer: { "Class 5": 62, "Class 6": 68, "Class 7": 67, "Class 8": 69 },          },
+            Math: { "Grade 5": 83, "Grade 6": 81, "Grade 7": 87, "Grade 8": 90 },
+            Science: { "Grade 5": 77, "Grade 6": 74, "Grade 7": 80, "Grade 8": 84 },
+            English: { "Grade 5": 90, "Grade 6": 88, "Grade 7": 91, "Grade 8": 93 },
+            History: { "Grade 5": 70, "Grade 6": 78, "Grade 7": 80, "Grade 8": 90 },
+            Geography: { "Grade 5": 75, "Grade 6": 70, "Grade 7": 73, "Grade 8": 79 },
+            Computer: { "Grade 5": 62, "Grade 6": 68, "Grade 7": 67, "Grade 8": 69 },          },
 
         finalExamPerformance: [
           { class: "5", performance: 70 },
@@ -660,7 +660,7 @@ const students = [
         attendance: 59,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
-              class: "8",
+              class: "9",
               ratings: [
                 { subject: "Math", rating: 3 },
                 { subject: "Science", rating: 4 },
@@ -684,88 +684,88 @@ const students = [
 
           internalExamScores: {
             Math: {
-                "Class 5 - Pre Mid Term": 84,
-                "Class 5 - Mid Term": 82,
-                "Class 5 - Post Mid Term": 80,
-                "Class 6 - Pre Mid Term": 87,
-                "Class 6 - Mid Term": 88,
-                "Class 6 - Post Mid Term": 85,
-                "Class 7 - Pre Mid Term": 86,
-                "Class 7 - Mid Term": 80,
-                "Class 7 - Post Mid Term": 84,
-                "Class 8 - Pre Mid Term": 96,
-                "Class 8 - Mid Term": 90,
-                "Class 8 - Post Mid Term": 98,
+                "Grade 5 - Pre Mid Term": 84,
+                "Grade 5 - Mid Term": 82,
+                "Grade 5 - Post Mid Term": 80,
+                "Grade 6 - Pre Mid Term": 87,
+                "Grade 6 - Mid Term": 88,
+                "Grade 6 - Post Mid Term": 85,
+                "Grade 7 - Pre Mid Term": 86,
+                "Grade 7 - Mid Term": 80,
+                "Grade 7 - Post Mid Term": 84,
+                "Grade 8 - Pre Mid Term": 96,
+                "Grade 8 - Mid Term": 90,
+                "Grade 8 - Post Mid Term": 98,
             },
             Science: {
-                "Class 5 - Pre Mid Term": 45,
-          "Class 5 - Mid Term": 51,
-          "Class 5 - Post Mid Term": 60,
-          "Class 6 - Pre Mid Term": 60,
-          "Class 6 - Mid Term": 75,
-          "Class 6 - Post Mid Term": 80,
-          "Class 7 - Pre Mid Term": 60,
-          "Class 7 - Mid Term": 75,
-          "Class 7 - Post Mid Term": 80,
-          "Class 8 - Pre Mid Term": 80,
-          "Class 8 - Mid Term": 82,
-          "Class 8 - Post Mid Term": 85,
+                "Grade 5 - Pre Mid Term": 45,
+          "Grade 5 - Mid Term": 51,
+          "Grade 5 - Post Mid Term": 60,
+          "Grade 6 - Pre Mid Term": 60,
+          "Grade 6 - Mid Term": 75,
+          "Grade 6 - Post Mid Term": 80,
+          "Grade 7 - Pre Mid Term": 60,
+          "Grade 7 - Mid Term": 75,
+          "Grade 7 - Post Mid Term": 80,
+          "Grade 8 - Pre Mid Term": 80,
+          "Grade 8 - Mid Term": 82,
+          "Grade 8 - Post Mid Term": 85,
             },
             English: {
-                "Class 5 - Pre Mid Term": 80,
-                "Class 5 - Mid Term": 85,
-                "Class 5 - Post Mid Term": 78,
-                "Class 6 - Pre Mid Term": 87,
-                "Class 6 - Mid Term": 78,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 82,
-                "Class 7 - Mid Term": 78,
-                "Class 7 - Post Mid Term": 70,
-                "Class 8 - Pre Mid Term": 65,
-                "Class 8 - Mid Term": 45,
-                "Class 8 - Post Mid Term": 62,
+                "Grade 5 - Pre Mid Term": 80,
+                "Grade 5 - Mid Term": 85,
+                "Grade 5 - Post Mid Term": 78,
+                "Grade 6 - Pre Mid Term": 87,
+                "Grade 6 - Mid Term": 78,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 82,
+                "Grade 7 - Mid Term": 78,
+                "Grade 7 - Post Mid Term": 70,
+                "Grade 8 - Pre Mid Term": 65,
+                "Grade 8 - Mid Term": 45,
+                "Grade 8 - Post Mid Term": 62,
             },
             History: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 87,
-                "Class 8 - Mid Term": 88,
-                "Class 8 - Post Mid Term": 86,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 87,
+                "Grade 8 - Mid Term": 88,
+                "Grade 8 - Post Mid Term": 86,
               },
               Geography: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 79,
-                "Class 8 - Mid Term": 81,
-                "Class 8 - Post Mid Term": 87,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 79,
+                "Grade 8 - Mid Term": 81,
+                "Grade 8 - Post Mid Term": 87,
               },
               Computer: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 80,
-                "Class 8 - Mid Term": 82,
-                "Class 8 - Post Mid Term": 88,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 80,
+                "Grade 8 - Mid Term": 82,
+                "Grade 8 - Post Mid Term": 88,
               },
           },
       },
@@ -787,12 +787,12 @@ const students = [
           ],
 
           finalExamScores: {
-            Math: { "Class 5": 70, "Class 6": 70, "Class 7": 80, "Class 8": 85 },
-            Science: { "Class 5": 77, "Class 6": 74, "Class 7": 80, "Class 8": 84 },
-            English: { "Class 5": 90, "Class 6": 88, "Class 7": 91, "Class 8": 93 },
-            History: { "Class 5": 70, "Class 6": 78, "Class 7": 80, "Class 8": 90 },
-            Geography: { "Class 5": 75, "Class 6": 70, "Class 7": 73, "Class 8": 79 },
-            Computer: { "Class 5": 62, "Class 6": 68, "Class 7": 67, "Class 8": 69 },          },
+            Math: { "Grade 5": 70, "Grade 6": 70, "Grade 7": 80, "Grade 8": 85 },
+            Science: { "Grade 5": 77, "Grade 6": 74, "Grade 7": 80, "Grade 8": 84 },
+            English: { "Grade 5": 90, "Grade 6": 88, "Grade 7": 91, "Grade 8": 93 },
+            History: { "Grade 5": 70, "Grade 6": 78, "Grade 7": 80, "Grade 8": 90 },
+            Geography: { "Grade 5": 75, "Grade 6": 70, "Grade 7": 73, "Grade 8": 79 },
+            Computer: { "Grade 5": 62, "Grade 6": 68, "Grade 7": 67, "Grade 8": 69 },          },
 
         finalExamPerformance: [
           { class: "5", performance: 80 },
@@ -809,7 +809,7 @@ const students = [
         attendance: 60,   // 🟠 <--- Add attendance field
         behaviorRatings: [
             {
-              class: "8",
+              class: "9",
               ratings: [
                 { subject: "Math", rating: 5 },
                 { subject: "Science", rating: 3 },
@@ -832,88 +832,88 @@ const students = [
 
           internalExamScores: {
             Math: {
-                "Class 5 - Pre Mid Term": 80,
-                "Class 5 - Mid Term": 85,
-                "Class 5 - Post Mid Term": 78,
-                "Class 6 - Pre Mid Term": 87,
-                "Class 6 - Mid Term": 78,
-                "Class 6 - Post Mid Term": 68,
-                "Class 7 - Pre Mid Term": 65,
-                "Class 7 - Mid Term": 78,
-                "Class 7 - Post Mid Term": 70,
-                "Class 8 - Pre Mid Term": 89,
-                "Class 8 - Mid Term": 90,
-                "Class 8 - Post Mid Term": 96,
+                "Grade 5 - Pre Mid Term": 80,
+                "Grade 5 - Mid Term": 85,
+                "Grade 5 - Post Mid Term": 78,
+                "Grade 6 - Pre Mid Term": 87,
+                "Grade 6 - Mid Term": 78,
+                "Grade 6 - Post Mid Term": 68,
+                "Grade 7 - Pre Mid Term": 65,
+                "Grade 7 - Mid Term": 78,
+                "Grade 7 - Post Mid Term": 70,
+                "Grade 8 - Pre Mid Term": 89,
+                "Grade 8 - Mid Term": 90,
+                "Grade 8 - Post Mid Term": 96,
             },
             Science: {
-                "Class 5 - Pre Mid Term": 80,
-                "Class 5 - Mid Term": 85,
-                "Class 5 - Post Mid Term": 78,
-                "Class 6 - Pre Mid Term": 87,
-                "Class 6 - Mid Term": 78,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 82,
-                "Class 7 - Mid Term": 78,
-                "Class 7 - Post Mid Term": 70,
-                "Class 8 - Pre Mid Term": 75,
-                "Class 8 - Mid Term": 70,
-                "Class 8 - Post Mid Term": 69,
+                "Grade 5 - Pre Mid Term": 80,
+                "Grade 5 - Mid Term": 85,
+                "Grade 5 - Post Mid Term": 78,
+                "Grade 6 - Pre Mid Term": 87,
+                "Grade 6 - Mid Term": 78,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 82,
+                "Grade 7 - Mid Term": 78,
+                "Grade 7 - Post Mid Term": 70,
+                "Grade 8 - Pre Mid Term": 75,
+                "Grade 8 - Mid Term": 70,
+                "Grade 8 - Post Mid Term": 69,
             },
             English: {
-                "Class 5 - Pre Mid Term": 80,
-                "Class 5 - Mid Term": 85,
-                "Class 5 - Post Mid Term": 78,
-                "Class 6 - Pre Mid Term": 87,
-                "Class 6 - Mid Term": 78,
-                "Class 6 - Post Mid Term": 62,
-                "Class 7 - Pre Mid Term": 55,
-                "Class 7 - Mid Term": 68,
-                "Class 7 - Post Mid Term": 70,
-                "Class 8 - Pre Mid Term": 65,
-                "Class 8 - Mid Term": 45,
-                "Class 8 - Post Mid Term": 62,
+                "Grade 5 - Pre Mid Term": 80,
+                "Grade 5 - Mid Term": 85,
+                "Grade 5 - Post Mid Term": 78,
+                "Grade 6 - Pre Mid Term": 87,
+                "Grade 6 - Mid Term": 78,
+                "Grade 6 - Post Mid Term": 62,
+                "Grade 7 - Pre Mid Term": 55,
+                "Grade 7 - Mid Term": 68,
+                "Grade 7 - Post Mid Term": 70,
+                "Grade 8 - Pre Mid Term": 65,
+                "Grade 8 - Mid Term": 45,
+                "Grade 8 - Post Mid Term": 62,
             },
             History: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 87,
-                "Class 8 - Mid Term": 88,
-                "Class 8 - Post Mid Term": 86,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 87,
+                "Grade 8 - Mid Term": 88,
+                "Grade 8 - Post Mid Term": 86,
               },
               Geography: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 79,
-                "Class 8 - Mid Term": 81,
-                "Class 8 - Post Mid Term": 87,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 79,
+                "Grade 8 - Mid Term": 81,
+                "Grade 8 - Post Mid Term": 87,
               },
               Computer: {
-                "Class 5 - Pre Mid Term": 45,
-                "Class 5 - Mid Term": 51,
-                "Class 5 - Post Mid Term": 60,
-                "Class 6 - Pre Mid Term": 60,
-                "Class 6 - Mid Term": 75,
-                "Class 6 - Post Mid Term": 80,
-                "Class 7 - Pre Mid Term": 60,
-                "Class 7 - Mid Term": 75,
-                "Class 7 - Post Mid Term": 80,
-                "Class 8 - Pre Mid Term": 80,
-                "Class 8 - Mid Term": 82,
-                "Class 8 - Post Mid Term": 88,
+                "Grade 5 - Pre Mid Term": 45,
+                "Grade 5 - Mid Term": 51,
+                "Grade 5 - Post Mid Term": 60,
+                "Grade 6 - Pre Mid Term": 60,
+                "Grade 6 - Mid Term": 75,
+                "Grade 6 - Post Mid Term": 80,
+                "Grade 7 - Pre Mid Term": 60,
+                "Grade 7 - Mid Term": 75,
+                "Grade 7 - Post Mid Term": 80,
+                "Grade 8 - Pre Mid Term": 80,
+                "Grade 8 - Mid Term": 82,
+                "Grade 8 - Post Mid Term": 88,
               },
           },
           
@@ -922,102 +922,103 @@ const students = [
   ];
   
 
-const StudentPerformanceDashboard = () => {
-  const [selectedStudent, setSelectedStudent] = useState(null);
-
-  return (
-    <div className="bg-gray-800 rounded-lg shadow-md p-6 space-y-6">
-      <h2 className="text-2xl font-bold text-white mb-4">Individual Student Performance</h2>
-
-      {/* Student Selector */}
-      <div className="mb-4 max-w-xs">
-        <Select
-          options={students}
-          value={selectedStudent}
-          onChange={setSelectedStudent}
-          placeholder="Search here..."
-          className="text-black"
-          isSearchable
-          noOptionsMessage={() => "Type to search..."}
-        />
-      </div>
-
-      {/* Student Profile */}
-      {selectedStudent && (
-  <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-6">
-    {/* Left: Profile Image + Info */}
-    <div className="flex items-center gap-6">
-  <img
-    src={selectedStudent.image}
-    alt={selectedStudent.name}
-    className="w-64 h-64 rounded-full object-cover"
-  />
-  <div className="text-white space-y-2">
-    <h3 className="text-4xl font-bold">{selectedStudent.name}</h3>
-    <p className="text-xl font-semibold">Class: {selectedStudent.class}</p>
-    <p className="text-xl font-semibold">Section: {selectedStudent.section}</p>
-    <p className="text-xl font-semibold">Roll No: {selectedStudent.rollNumber}</p>
-  </div>
-</div>
-
-
-    {/* Right: Attendance & Behavior */}
-    <div className="flex flex-col sm:flex-row gap-28">
-      <div className="text-white">
-        <h3 className="text-md text-center font-semibold mb-4">Attendance</h3>
-        <AttendanceIndicator attendancePercentage={selectedStudent.attendance} />
-      </div>
-      <div className="text-white">
-        <h3 className="text-md text-center font-semibold mb-2">Behavior Ratings</h3>
-        <BehaviorRatingIndicator
-          ratingsData={selectedStudent.behaviorRatings}
-          studentName={selectedStudent.name}
-        />
-      </div>
-    </div>
-  </div>
-)}
-      {/* Divider */}
-      <div className="border-t border-gray-600 my-4"></div>
-      {/* Chart Section */}
-   {selectedStudent && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Final Exam Performance */}
-          <FinalExamPerformance
-            performanceData={selectedStudent.finalExamPerformance}
-            studentName={selectedStudent.name}
-          />
-
-          {/* Internal Exam Performance */}
-          <InternalExamPerformance
-            performanceData={selectedStudent.internalExamPerformance}
-            studentName={selectedStudent.name}
+  const StudentPerformanceDashboard = () => {
+    const [selectedStudent, setSelectedStudent] = useState(null);
+  
+    return (
+<div className="bg-gradient-to-r from-slate-700 to-cyan-600 rounded-lg shadow-md p-6 space-y-6">
+<h2 className="text-2xl font-bold text-white mb-4">Individual Student Performance</h2>
+  
+        {/* Student Selector */}
+        <div className="mb-4 max-w-xs">
+          <Select
+            options={students}
+            value={selectedStudent}
+            onChange={setSelectedStudent}
+            placeholder="Search here..."
+            className="text-black"
+            isSearchable
+            noOptionsMessage={() => "Type to search..."}
           />
         </div>
-      )}
-      {selectedStudent && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-     <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
-     <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
-  </div>
-)}
-
-      {selectedStudent && (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-    {/* Activity Participation */}
-    <ActivityParticipation
-      data={selectedStudent.activityParticipation}
-      studentName={selectedStudent.name}
-    />
-    <AwardsAndImprovements
-      awards={selectedStudent.awards}
-      improvementActions={selectedStudent.improvementActions}
-    />
-</div>
   
-)}
-
-    </div>
-  );
-};
+        {/* Student Profile */}
+        {selectedStudent && (
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-6">
+            {/* Left: Profile Image + Info */}
+            <div className="flex items-center gap-6">
+              <img
+                src={selectedStudent.image}
+                alt={selectedStudent.name}
+                className="w-64 h-64 rounded-full object-cover"
+              />
+              <div className="text-white space-y-2">
+                <h3 className="text-4xl font-bold">{selectedStudent.name}</h3>
+                <p className="text-xl font-semibold">Grade: {selectedStudent.class}</p>
+                <p className="text-xl font-semibold">Section: {selectedStudent.section}</p>
+                <p className="text-xl font-semibold">Roll No: {selectedStudent.rollNumber}</p>
+              </div>
+            </div>
+  
+            {/* Right: Attendance & Behavior */}
+            <div className="flex flex-col sm:flex-row gap-28">
+              <div className="text-white">
+                <h3 className="text-md text-center font-semibold mb-4">Attendance</h3>
+                <AttendanceIndicator attendancePercentage={selectedStudent.attendance} />
+              </div>
+              <div className="text-white">
+                <h3 className="text-md text-center font-semibold mb-2">Behavior Ratings</h3>
+                <BehaviorRatingIndicator
+                  ratingsData={selectedStudent.behaviorRatings}
+                  studentName={selectedStudent.name}
+                />
+              </div>
+            </div>
+          </div>
+        )}
+  
+        {/* Divider */}
+        <div className="border-t border-gray-600 my-4"></div>
+  
+        {/* Chart Section */}
+        {selectedStudent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Final Exam Performance */}
+            <FinalExamPerformance
+              performanceData={selectedStudent.finalExamPerformance}
+              studentName={selectedStudent.name}
+            />
+  
+            {/* Internal Exam Performance */}
+            <InternalExamPerformance
+              performanceData={selectedStudent.internalExamPerformance}
+              studentName={selectedStudent.name}
+            />
+          </div>
+        )}
+  
+        {selectedStudent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
+            <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
+          </div>
+        )}
+  
+        {selectedStudent && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            {/* Activity Participation */}
+            <ActivityParticipation
+              data={selectedStudent.activityParticipation}
+              studentName={selectedStudent.name}
+            />
+            <AwardsAndImprovements
+              awards={selectedStudent.awards}
+              improvementActions={selectedStudent.improvementActions}
+            />
+          </div>
+        )}
+      </div>
+    );
+  };
+  
 export default StudentPerformanceDashboard;

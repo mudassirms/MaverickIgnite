@@ -3,24 +3,30 @@ import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
 const InternalExamPerformance = ({ performanceData }) => {
-  // Prepare the data for the three exams (Assuming each class has 3 scores)
-  const examScores = performanceData.map((d) => d.scores);
-  
-  // Transform the data to create three separate series for the three exams
+  // Prepare the data for the three exams
   const seriesData = [
     {
       name: "Pre Mid Term",
-      data: examScores.map((scores) => scores[0]),
+      data: performanceData.map((d) => ({
+        y: d.scores[0],
+        name: `Grade ${d.class}`,
+      })),
       color: "#10B981", // Green
     },
     {
       name: "Mid Term",
-      data: examScores.map((scores) => scores[1]),
+      data: performanceData.map((d) => ({
+        y: d.scores[1],
+        name: `Grade ${d.class}`,
+      })),
       color: "#4B5563", // Grayish
     },
     {
       name: "Post Mid Term",
-      data: examScores.map((scores) => scores[2]),
+      data: performanceData.map((d) => ({
+        y: d.scores[2],
+        name: `Grade ${d.class}`,
+      })),
       color: "#3B82F6", // Blue
     },
   ];
@@ -35,7 +41,7 @@ const InternalExamPerformance = ({ performanceData }) => {
       style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: performanceData.map((d) => `Grade ${d.class}`), // Corrected this line
+      categories: performanceData.map((d) => `Grade ${d.class}`),
       labels: { style: { color: "#D1D5DB" } },
       gridLineColor: "#E5E7EB",
     },
@@ -52,7 +58,7 @@ const InternalExamPerformance = ({ performanceData }) => {
       borderColor: "#4B5563",
       style: { color: "#E5E7EB" },
       formatter: function () {
-        return `<b>${this.x}</b><br/>${this.series.name}: ${this.y}%`;
+        return `<b>${this.point.name}</b><br/>${this.series.name}: ${this.y}%`;
       },
     },
     series: seriesData,
@@ -60,7 +66,7 @@ const InternalExamPerformance = ({ performanceData }) => {
     legend: {
       enabled: true,
       itemStyle: {
-        color: "#FFFFFF", // White legend text
+        color: "#FFFFFF",
       },
     },
   };

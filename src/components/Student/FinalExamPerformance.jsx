@@ -6,6 +6,12 @@ const FinalExamPerformance = ({ performanceData }) => {
   // Dynamically generate grade labels from performanceData
   const gradeLabels = performanceData.map((d) => `Grade ${d.class}`);
 
+  // Prepare data with custom point names for tooltips
+  const seriesData = performanceData.map((d) => ({
+    y: d.performance,
+    name: `Grade ${d.class}`,
+  }));
+
   const chartOptions = {
     chart: {
       type: "column",
@@ -34,13 +40,13 @@ const FinalExamPerformance = ({ performanceData }) => {
       borderColor: "#4B5563",
       style: { color: "#E5E7EB" },
       formatter: function () {
-        return `<b>${this.x}</b><br/>Performance: ${this.y}%`;
+        return `<b>${this.point.name}</b><br/>Performance: ${this.y}%`;
       },
     },
     series: [
       {
         name: "Performance",
-        data: performanceData.map((d) => d.performance),
+        data: seriesData,
         color: "#10B981",
       },
     ],

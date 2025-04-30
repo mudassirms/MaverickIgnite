@@ -5,8 +5,8 @@ const BehaviorRatingIndicator = ({ ratingsData, studentName }) => {
   const roundedAvg = Math.round(overallAvg);
 
   return (
-    <div className="bg-gray-700 p-4 rounded-lg text-white w-full max-w-xs">
-      <h4 className="text-lg font-semibold mb-2">
+<div className="bg-gradient-to-r from-slate-700 to-cyan-600 p-4 rounded-lg shadow-md text-white space-y-6">      
+  <h4 className="text-lg font-semibold mb-2">
         Behavior Ratings - {studentName}
       </h4>
 
@@ -21,7 +21,7 @@ const BehaviorRatingIndicator = ({ ratingsData, studentName }) => {
       {/* Subject-wise Ratings by Class */}
       {ratingsData.map((entry, index) => (
         <div key={index} className="mb-3">
-          <h5 className="font-medium mb-1">Class {entry.class}</h5>
+          <h5 className="font-medium mb-1">Grade {entry.class}</h5>
           <div className="grid grid-cols-2 gap-x-4 gap-y-2 pl-2">
             {entry.ratings.map((r, i) => (
               <div key={i} className="flex justify-between text-sm">
