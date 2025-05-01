@@ -9,6 +9,8 @@ import ActivityParticipation from "./ActivityParticipation";
 import FinalExamHeatmap from "./HeatmapForFinalExam";
 import AwardsAndImprovements from "./AwardsAndImprovements";
 import InternalExamHeatmap from "./InternalExamHeatmap";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 const students = [
     {
@@ -926,106 +928,129 @@ const students = [
   const StudentPerformanceDashboard = () => {
     const [selectedStudent, setSelectedStudent] = useState(null);
   
+    const exportToPDF = () => {
+      const input = document.getElementById("student-dashboard-content");
+      if (!input) return;
+  
+      html2canvas(input, {
+        useCORS: true,
+        scale: 2,
+        scrollY: -window.scrollY,
+      }).then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF("p", "mm", "a4");
+        const imgProps = pdf.getImageProperties(imgData);
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+  
+        pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+        pdf.save("student-performance.pdf");
+      });
+    };
+  
     return (
-<div className="bg-gradient-to-r from-slate-700 to-cyan-600 rounded-lg shadow-md p-6 space-y-6">
-  <div className="flex items-center gap-2 text-2xl font-bold text-white mb-4">
-    <UserCheck className="w-7 h-7 text-white" />
-    <h2>Individual Student Performance</h2>
-  </div>
+      <div className="bg-gradient-to-r from-slate-700 to-cyan-600 rounded-lg shadow-md p-6 space-y-6">
+        <div className="flex items-center gap-2 text-2xl font-bold text-white mb-4">
+          <UserCheck className="w-7 h-7 text-white" />
+          <h2>Individual Student Performance</h2>
+        </div>
   
         {/* Student Selector */}
         <div className="mb-4 max-w-xs">
-  <Select
-    options={[{ label: "Select Student", value: "" }, ...students]}
-    value={selectedStudent}
-    onChange={(option) =>
-      option.value === "" ? setSelectedStudent(null) : setSelectedStudent(option)
-    }
-    placeholder="Search here..."
-    className="text-black"
-    isSearchable
-    noOptionsMessage={() => "Type to search..."}
-  />
-</div>
-
+          <Select
+            options={[{ label: "Select Student", value: "" }, ...students]}
+            value={selectedStudent}
+            onChange={(option) =>
+              option.value === "" ? setSelectedStudent(null) : setSelectedStudent(option)
+            }
+            placeholder="Search here..."
+            className="text-black"
+            isSearchable
+            noOptionsMessage={() => "Type to search..."}
+          />
+        </div>
   
-        {/* Student Profile */}
+        {/* Export Button */}
         {selectedStudent && (
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-6">
-            {/* Left: Profile Image + Info */}
-            <div className="flex items-center gap-6">
-              <img
-                src={selectedStudent.image}
-                alt={selectedStudent.name}
-                className="w-64 h-64 rounded-full object-cover"
-              />
-              <div className="text-white space-y-2">
-                <h3 className="text-4xl font-bold">{selectedStudent.name}</h3>
-                <p className="text-xl font-semibold">Grade: {selectedStudent.class}</p>
-                <p className="text-xl font-semibold">Section: {selectedStudent.section}</p>
-                <p className="text-xl font-semibold">Roll No: {selectedStudent.rollNumber}</p>
-              </div>
-            </div>
+          <button
+            onClick={exportToPDF}
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+          >
+            Export Student Performance
+          </button>
+        )}
   
-            {/* Right: Attendance & Behavior */}
-            <div className="flex flex-col sm:flex-row gap-28">
-              <div className="text-white">
-                <h3 className="text-md text-center font-semibold mb-4">Attendance</h3>
-                <AttendanceIndicator attendancePercentage={selectedStudent.attendance} />
-              </div>
-              <div className="text-white">
-                <h3 className="text-md text-center font-semibold mb-2">Behavior Ratings</h3>
-                <BehaviorRatingIndicator
-                  ratingsData={selectedStudent.behaviorRatings}
-                  studentName={selectedStudent.name}
+        {/* Exportable Content */}
+        {selectedStudent && (
+          <div id="student-dashboard-content" className="space-y-6">
+            {/* Student Profile */}
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+              {/* Profile */}
+              <div className="flex items-center gap-6">
+                <img
+                  src={selectedStudent.image}
+                  alt={selectedStudent.name}
+                  className="w-64 h-64 rounded-full object-cover"
                 />
+                <div className="text-white space-y-2">
+                  <h3 className="text-4xl font-bold">{selectedStudent.name}</h3>
+                  <p className="text-xl font-semibold">Grade: {selectedStudent.class}</p>
+                  <p className="text-xl font-semibold">Section: {selectedStudent.section}</p>
+                  <p className="text-xl font-semibold">Roll No: {selectedStudent.rollNumber}</p>
+                </div>
+              </div>
+  
+              {/* Attendance & Behavior */}
+              <div className="flex flex-col sm:flex-row gap-28">
+                <div className="text-white">
+                  <h3 className="text-md text-center font-semibold mb-4">Attendance</h3>
+                  <AttendanceIndicator attendancePercentage={selectedStudent.attendance} />
+                </div>
+                <div className="text-white">
+                  <h3 className="text-md text-center font-semibold mb-2">Behavior Ratings</h3>
+                  <BehaviorRatingIndicator
+                    ratingsData={selectedStudent.behaviorRatings}
+                    studentName={selectedStudent.name}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        )}
   
-        {/* Divider */}
-        <div className="border-t border-gray-600 my-4"></div>
+            <div className="border-t border-gray-600 my-4"></div>
   
-        {/* Chart Section */}
-        {selectedStudent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Final Exam Performance */}
-            <FinalExamPerformance
-              performanceData={selectedStudent.finalExamPerformance}
-              studentName={selectedStudent.name}
-            />
+            {/* Exam Charts */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FinalExamPerformance
+                performanceData={selectedStudent.finalExamPerformance}
+                studentName={selectedStudent.name}
+              />
+              <InternalExamPerformance
+                performanceData={selectedStudent.internalExamPerformance}
+                studentName={selectedStudent.name}
+              />
+            </div>
   
-            {/* Internal Exam Performance */}
-            <InternalExamPerformance
-              performanceData={selectedStudent.internalExamPerformance}
-              studentName={selectedStudent.name}
-            />
-          </div>
-        )}
+            {/* Heatmaps */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
+              <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
+            </div>
   
-        {selectedStudent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FinalExamHeatmap finalExamScores={selectedStudent.finalExamScores} />
-            <InternalExamHeatmap internalExamScores={selectedStudent.internalExamScores} />
-          </div>
-        )}
-  
-        {selectedStudent && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {/* Activity Participation */}
-            <ActivityParticipation
-              data={selectedStudent.activityParticipation}
-              studentName={selectedStudent.name}
-            />
-            <AwardsAndImprovements
-              awards={selectedStudent.awards}
-              improvementActions={selectedStudent.improvementActions}
-            />
+            {/* Activities & Awards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <ActivityParticipation
+                data={selectedStudent.activityParticipation}
+                studentName={selectedStudent.name}
+              />
+              <AwardsAndImprovements
+                awards={selectedStudent.awards}
+                improvementActions={selectedStudent.improvementActions}
+              />
+            </div>
           </div>
         )}
       </div>
     );
   };
   
-export default StudentPerformanceDashboard;
+  export default StudentPerformanceDashboard;

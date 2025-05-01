@@ -10,7 +10,7 @@ const LoginPage = () => {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("loggedIn") === "true";
     if (isLoggedIn) {
-      navigate("/");  // Redirect to dashboard if already logged in
+      navigate("/"); // Redirect to dashboard if already logged in
     }
   }, [navigate]);
 
@@ -26,16 +26,26 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
       {/* Optional subtle animated background */}
       <div className="absolute w-full h-full bg-gradient-to-br from-cyan-800 via-slate-900 to-gray-900 opacity-10 blur-2xl z-0 animate-pulse" />
+
+      {/* School Name Heading */}
+      <div className="relative z-10 text-center mb-10">
+        <h1 className="text-5xl font-extrabold text-cyan-300 mb-8">
+          Green Valley International School
+        </h1>
+        <p className="text-xl text-gray-300 tracking-wide">
+          Dashboard and Reporting System
+        </p>
+      </div>
 
       {/* Login Form */}
       <form
         onSubmit={handleLogin}
         className="relative z-10 bg-gray-800/80 border border-cyan-600 rounded-2xl shadow-lg p-10 w-[90%] max-w-md backdrop-blur-sm"
       >
-        <h2 className="text-3xl font-bold mb-6 text-cyan-400 text-center">Dashboard Login</h2>
+        <h2 className="text-3xl font-bold mb-6 text-cyan-400 text-center">Login</h2>
 
         <label className="block mb-2 text-sm font-semibold text-gray-300">Email</label>
         <input
