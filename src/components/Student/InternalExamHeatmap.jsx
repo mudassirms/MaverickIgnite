@@ -87,7 +87,7 @@ const InternalExamHeatmap = ({ internalExamScores }) => {
           }}
           className="bg-gray-700 text-white border border-gray-600 rounded px-2 py-1"
         >
-          <option value="Select">Select</option>
+          <option value="Select">HeatMap</option>
           <option value="Column">Column Chart</option>
         </select>
 

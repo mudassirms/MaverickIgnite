@@ -65,7 +65,7 @@ const FinalExamHeatmap = ({ finalExamScores }) => {
           onChange={(e) => setViewType(e.target.value)}
           className="bg-gray-700 text-white border border-gray-600 rounded px-2 py-1 ml-auto relative z-10"
         >
-          <option value="Select">Select</option>
+          <option value="Select">HeatMap</option>
           <option value="Line Chart">Line Chart</option>
         </select>
       </div>
