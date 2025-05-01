@@ -44,13 +44,12 @@ const TopPerformingStudents = ({ year, grade }) => {
       style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: filteredStudents.map((s) => s.name),
+      categories: filteredStudents.map((s) => s.name), // Student names are the categories
       title: { text: null },
       labels: {
         style: { color: "#D1D5DB" },
       },
-      // Remove extra labels on x-axis (score label issue)
-      tickWidth: 0, // Removes ticks from x-axis
+      tickWidth: 0,
     },
     yAxis: {
       min: 0,
@@ -63,24 +62,31 @@ const TopPerformingStudents = ({ year, grade }) => {
       gridLineColor: "#374151",
     },
     tooltip: {
-      backgroundColor: "#1F2937",
-      borderColor: "#4B5563",
-      style: { color: "#E5E7EB" },
+      backgroundColor: "#111827", 
+      borderColor: "#374151", 
+      borderRadius: 4, 
+      padding: 10, 
+      style: {
+        color: "#E5E7EB", // Text color for the tooltip
+        fontSize: "14px", // Ensuring text size is appropriate
+      },
       formatter: function () {
-        return `<b>${this.key}</b>: ${this.y}%`;
+        const studentName = this.point.category; 
+        const score = this.y; 
+        return `<b>${studentName}</b>: ${score}%`; 
       },
     },
     series: [
       {
-        name: "", // Remove series name so it doesn't appear in the legend
+        name: "",
         data: filteredStudents.map((s) => s.score),
         color: "#22D3EE",
-        enableMouseTracking: false, // Disable mouse tracking to remove hover dots
+        enableMouseTracking: true, 
       },
     ],
     credits: { enabled: false },
     legend: {
-      enabled: false, // Disable the legend to remove series name dot
+      enabled: false,
     },
   };
 

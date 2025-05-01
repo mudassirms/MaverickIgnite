@@ -44,8 +44,8 @@ const FeeCollectionEfficiency = ({ year }) => {
       backgroundColor: "#111827",
       borderColor: "#4B5563",
       style: { color: "#F9FAFB" },
-      headerFormat: "",
-      pointFormat: "<b>{point.y}%</b>",
+      headerFormat: "<b>{point.key}</b><br/>", // Show the year in the header
+      pointFormat: "Efficiency: <b>{point.y}%</b>", // Display efficiency
       useHTML: true,
     },
     plotOptions: {
@@ -78,7 +78,7 @@ const FeeCollectionEfficiency = ({ year }) => {
     legend: { enabled: false },
     credits: { enabled: false },
   };
-
+  
   return (
     <motion.div
       className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700 w-full"

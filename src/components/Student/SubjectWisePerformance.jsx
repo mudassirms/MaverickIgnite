@@ -46,11 +46,11 @@ const SubjectWisePerformance = ({ year, grade }) => {
       gridLineColor: "#374151",
     },
     tooltip: {
-      backgroundColor: "#1F2937",
-      borderColor: "#4B5563",
-      style: { color: "#E5E7EB" },
+      backgroundColor: "#1F2937", // Tooltip background color
+      borderColor: "#4B5563", // Tooltip border color
+      style: { color: "#E5E7EB" }, // Tooltip text color
       formatter: function () {
-        return `<b>${this.x}</b>: ${this.y}%`;
+        return `<b>${this.point.category}</b>: ${this.y}%`; // this.point.category gives the subject name
       },
     },
     series: [

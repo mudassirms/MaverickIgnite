@@ -40,15 +40,9 @@ const ActivityParticipationChart = ({ data, studentName }) => {
       itemStyle: { color: "#ccc" },
     },
     tooltip: {
+      shared: true,
       backgroundColor: "#333",
       style: { color: "#fff" },
-      formatter: function () {
-        const activities = participationHistory[this.point.index]?.participated || [];
-        const activityList = activities.length ? activities.join(", ") : "No participation";
-    
-        return `<b>Activities Participated: ${this.y}</b><br/>
-                <span style="color:#38bdf8">[${activityList}]</span>`;
-      },
     },
     series: [
       {
@@ -62,8 +56,7 @@ const ActivityParticipationChart = ({ data, studentName }) => {
 
   return (
     <motion.div
-      className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-4 border border-gray-700"
-      initial={{ opacity: 0, y: 20 }}
+    className="bg-gray-800 bg-opacity-80 backdrop-blur-sm shadow-md rounded-xl p-4 border border-gray-700"      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
     >

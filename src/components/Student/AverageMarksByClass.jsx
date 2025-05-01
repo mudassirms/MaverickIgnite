@@ -46,9 +46,10 @@ const AverageMarksByClass = ({ year, grade }) => {
       borderColor: "#4B5563",
       style: { color: "#E5E7EB" },
       formatter: function () {
-        return `<b>${this.x}</b><br/>Average Marks: ${this.y}`;
+        return `<b>${this.key}</b><br/>${this.series.name}: ${this.y}%`;
       },
     },
+    
     series: [
       {
         name: "Average Marks",

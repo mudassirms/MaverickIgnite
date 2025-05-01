@@ -2,7 +2,7 @@ import { BadgeCheck, Trophy, Clock } from "lucide-react";
 
 const AwardsAndImprovements = ({ awards = [], improvementActions = [] }) => {
   return (
-    <div className="bg-gradient-to-r from-slate-700 to-cyan-600 p-4 rounded-lg shadow-md text-white space-y-6">
+    <div className="bg-gray-700 p-4 rounded-lg shadow-md text-white space-y-6">
       {/* Awards Section */}
       <div>
         <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
@@ -13,7 +13,7 @@ const AwardsAndImprovements = ({ awards = [], improvementActions = [] }) => {
             {awards.map((award, index) => (
               <li
                 key={index}
-                className="bg-gradient-to-r from-slate-800 to-cyan-600 p-3 rounded-md border-l-4 border-green-600"
+                className="bg-gray-800 p-3 rounded-md border-l-4 border-green-400"
               >
                 <p className="font-bold">{award.title}</p>
                 <p className="text-sm text-gray-300">
@@ -38,7 +38,7 @@ const AwardsAndImprovements = ({ awards = [], improvementActions = [] }) => {
             {improvementActions.map((item, index) => (
               <li
                 key={index}
-                className="bg-gradient-to-r from-slate-800 to-cyan-600 p-3 rounded-md border-l-4 border-red-600"
+                className="bg-gray-800 p-3 rounded-md border-l-4 border-red-400"
               >
                 <p className="font-medium">{item.action}</p>
                 <p className="text-sm text-gray-300 flex items-center gap-1">

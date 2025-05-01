@@ -53,8 +53,12 @@ const PassFailRatio = ({ year, Grade }) => {
       backgroundColor: "#111827",
       borderColor: "#4B5563",
       style: { color: "#F9FAFB" },
-      headerFormat: "<b>{point.x}</b><br/>",
-      pointFormat: "{series.name}: {point.y}%<br/>",
+      formatter: function () {
+        return `<b>${this.points[0].point.category}</b><br/>` + 
+          this.points
+            .map(pt => `${pt.series.name}: ${pt.y}%`)
+            .join("<br/>");
+      }
     },
     plotOptions: {
       bar: {

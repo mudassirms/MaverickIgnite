@@ -68,6 +68,11 @@ const PerformanceBySubject = ({ year, qualification }) => {
       backgroundColor: "#111827",
       style: { color: "#F9FAFB" },
       valueSuffix: " marks",
+      formatter: function () {
+        const subjectName = this.point.category; // Get subject from categories
+        const averageScore = this.y; // Get the average score for the subject
+        return `<b>${subjectName}</b>: ${averageScore}%`; // Display subject and average score
+      },
     },
     plotOptions: {
       bar: {
@@ -84,7 +89,7 @@ const PerformanceBySubject = ({ year, qualification }) => {
         name: "", // Remove series name so it doesn't appear in the legend
         data: averagedData.map((d) => d.score),
         color: "#34D399",
-        enableMouseTracking: false, // Disable hover interaction to remove dots
+        enableMouseTracking: true, // Enable mouse tracking to show tooltips
       },
     ],
     credits: { enabled: false },

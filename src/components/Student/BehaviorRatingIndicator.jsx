@@ -5,8 +5,8 @@ const BehaviorRatingIndicator = ({ ratingsData, studentName }) => {
   const roundedAvg = Math.round(overallAvg);
 
   return (
-<div className="bg-gradient-to-r from-slate-700 to-cyan-600 p-4 rounded-lg shadow-md text-white space-y-6">      
-  <h4 className="text-lg font-semibold mb-2">
+    <div className="bg-gray-700 p-4 rounded-lg text-white w-full max-w-xs">
+      <h4 className="text-lg font-semibold mb-2">
         Behavior Ratings - {studentName}
       </h4>
 
