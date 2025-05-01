@@ -93,26 +93,34 @@ const StudentPage = () => {
         </motion.div>
 
         <div className="mb-8">
-    <StudentPerformanceDashboard />
-  </div>
+  <StudentPerformanceDashboard />
+</div>
 
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
-          <AverageMarksByClass year={selectedYear} grade={selectedGrade} />
-          <SubjectWisePerformance year={selectedYear} grade={selectedGrade} />
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
-        <GenderWisePerformance year={selectedYear} grade={selectedGrade} />
-        <PerformanceByParentEducation year={selectedYear} grade={selectedGrade} />
-        <PerformanceByReligionCast year={selectedYear} grade={selectedGrade} />
-        <PerformanceByMotherTongue year={selectedYear} grade={selectedGrade} />
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
-          <TopPerformingStudents year={selectedYear} grade={selectedGrade} />
-          <StudentAttendanceVsMarks year={selectedYear} grade={selectedGrade} />
-          {/* <DropOutRate year={selectedYear} grade={selectedGrade} /> */}
-          <ExtracurricularActivities year = {selectedYear} grade={selectedGrade}/>
-          <PassFailRatio year={selectedYear} grade = {selectedGrade}/>
-        </div>
+{/* Overall Dashboard Heading */}
+<div className="flex items-center gap-2 text-xl font-semibold text-white mb-4 border-b border-gray-600 pb-2">
+  <BarChart2 className="w-6 h-6 text-cyan-400" />
+  <h2>Overall Students Performance</h2>
+</div>
+
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
+  <AverageMarksByClass year={selectedYear} grade={selectedGrade} />
+  <SubjectWisePerformance year={selectedYear} grade={selectedGrade} />
+</div>
+
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
+  <GenderWisePerformance year={selectedYear} grade={selectedGrade} />
+  <PerformanceByParentEducation year={selectedYear} grade={selectedGrade} />
+  <PerformanceByReligionCast year={selectedYear} grade={selectedGrade} />
+  <PerformanceByMotherTongue year={selectedYear} grade={selectedGrade} />
+</div>
+
+<div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
+  <TopPerformingStudents year={selectedYear} grade={selectedGrade} />
+  <StudentAttendanceVsMarks year={selectedYear} grade={selectedGrade} />
+  {/* <DropOutRate year={selectedYear} grade={selectedGrade} /> */}
+  <ExtracurricularActivities year={selectedYear} grade={selectedGrade} />
+  <PassFailRatio year={selectedYear} grade={selectedGrade} />
+</div>
       </main>
     </div>
   );

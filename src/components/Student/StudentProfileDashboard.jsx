@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Select from "react-select";
+import { UserCheck } from "lucide-react";
 import FinalExamPerformance from "./FinalExamPerformance";
 import InternalExamPerformance from "./InternalExamPerformance";
 import AttendanceIndicator from "./AttendanceIndicator";
@@ -927,20 +928,26 @@ const students = [
   
     return (
 <div className="bg-gradient-to-r from-slate-700 to-cyan-600 rounded-lg shadow-md p-6 space-y-6">
-<h2 className="text-2xl font-bold text-white mb-4">Individual Student Performance</h2>
+  <div className="flex items-center gap-2 text-2xl font-bold text-white mb-4">
+    <UserCheck className="w-7 h-7 text-white" />
+    <h2>Individual Student Performance</h2>
+  </div>
   
         {/* Student Selector */}
         <div className="mb-4 max-w-xs">
-          <Select
-            options={students}
-            value={selectedStudent}
-            onChange={setSelectedStudent}
-            placeholder="Search here..."
-            className="text-black"
-            isSearchable
-            noOptionsMessage={() => "Type to search..."}
-          />
-        </div>
+  <Select
+    options={[{ label: "Select Student", value: "" }, ...students]}
+    value={selectedStudent}
+    onChange={(option) =>
+      option.value === "" ? setSelectedStudent(null) : setSelectedStudent(option)
+    }
+    placeholder="Search here..."
+    className="text-black"
+    isSearchable
+    noOptionsMessage={() => "Type to search..."}
+  />
+</div>
+
   
         {/* Student Profile */}
         {selectedStudent && (
