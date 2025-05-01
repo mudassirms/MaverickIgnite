@@ -59,7 +59,7 @@ const LoginPage = () => {
           value={role}
           onChange={(e) => setRole(e.target.value)}
         >
-          <option>Manager</option>
+          <option>Management</option>
           <option>Student</option>
           <option>Teacher</option>
           <option>Parent</option>
