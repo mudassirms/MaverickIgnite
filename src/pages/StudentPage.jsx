@@ -20,9 +20,43 @@ import TopPerformingStudents from "../components/Student/TopPerformingStudent";
 import StudentAttendanceVsMarks from "../components/Student/StudentAttendanceVsMarks";
 import PassFailRatio from "../components/Student/PassFailRatio";
 import ExtracurricularActivities from "../components/Student/Extraactivties";
-// import IndividualStudentPerformance from "../components/Student/IndividualStudentPerformance"; 
 import StudentPerformanceDashboard from "../components/Student/StudentProfileDashboard";
+import VirtualClassGridHeatmap from "../components/Student/virtualClass";
 
+const students = [
+  { name: "Leah Howard", score: 30 },
+  { name: "Mark Dean", score: 42 },
+  { name: "Ivy Stone", score: 38 },
+  { name: "Leah Howard", score: 53 },
+  { name: "Mark Dean", score: 89 },
+  { name: "Ivy Stone", score: 98 },
+  { name: "Leah Howard", score: 74 },
+  { name: "Mark Dean", score: 76 },
+  { name: "Ivy Stone", score: 88 },
+  { name: "Leah Howard", score: 69 },
+  { name: "Mark Dean", score: 65 },
+  { name: "Ivy Stone", score: 64 },
+  { name: "Leah Howard", score: 60 },
+  { name: "Mark Dean", score: 49 },
+  { name: "Ivy Stone", score: 53 },
+  { name: "Leah Howard", score: 77 },
+  { name: "Mark Dean", score: 80 },
+  { name: "Ivy Stone", score: 80 },
+  { name: "Leah Howard", score: 82 },
+  { name: "Mark Dean", score: 90 },
+  { name: "Ivy Stone", score: 93 },
+  { name: "Leah Howard", score: 96 },
+  { name: "Mark Dean", score: 94 },
+  { name: "Ivy Stone", score: 38 },
+  { name: "Leah Howard", score: 40 },
+  { name: "Mark Dean", score: 52 },
+  { name: "Ivy Stone", score: 74 },
+  { name: "Leah Howard", score: 47 },
+  { name: "Mark Dean", score: 72 },
+  { name: "Ivy Stone", score: 29 },
+
+ 
+];
 
 const totalStats = {
   totalStudents: "1,250",
@@ -31,7 +65,6 @@ const totalStats = {
   topPerformers: "125",
 };
 
-// Replace with actual data for filtered stats based on year and grade
 const filteredStats = {
   totalStudents: "200",
   avgPerformance: "87%",
@@ -43,7 +76,6 @@ const StudentPage = () => {
   const [selectedYear, setSelectedYear] = useState(null);
   const [selectedGrade, setSelectedGrade] = useState(null);
 
-  // Determine which stats to display based on filters
   const studentStats = selectedYear && selectedGrade ? filteredStats : totalStats;
 
   return (
@@ -92,6 +124,19 @@ const StudentPage = () => {
           <StatCard name='Top Performers' icon={GraduationCap} value={studentStats.topPerformers} color='#EF4444' />
         </motion.div>
 
+   {/* Virtual Class View Section */}
+   <div className="mb-8">
+  <h2 className="text-xl font-semibold text-white mb-4 border-b border-gray-600 pb-2 flex items-center gap-2">
+    <BarChart2 className="w-6 h-6 text-cyan-400" />
+    <span>Virtual Class View</span>
+  </h2>
+
+  <div className="bg-gray-800 p-4 rounded-lg shadow-md w-full max-w-3xl mx-auto">
+    <VirtualClassGridHeatmap studentsData={students} />
+  </div>
+</div>
+
+ {/* Individual student Section */}
         <div className="mb-8">
   <StudentPerformanceDashboard />
 </div>
@@ -117,7 +162,6 @@ const StudentPage = () => {
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8'>
   <TopPerformingStudents year={selectedYear} grade={selectedGrade} />
   <StudentAttendanceVsMarks year={selectedYear} grade={selectedGrade} />
-  {/* <DropOutRate year={selectedYear} grade={selectedGrade} /> */}
   <ExtracurricularActivities year={selectedYear} grade={selectedGrade} />
   <PassFailRatio year={selectedYear} grade={selectedGrade} />
 </div>

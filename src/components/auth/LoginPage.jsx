@@ -10,7 +10,7 @@ const LoginPage = () => {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("loggedIn") === "true";
     if (isLoggedIn) {
-      navigate("/"); // Redirect to dashboard if already logged in
+      navigate("/"); 
     }
   }, [navigate]);
 
@@ -19,7 +19,7 @@ const LoginPage = () => {
     if (email && password && role) {
       localStorage.setItem("loggedIn", "true");
       localStorage.setItem("role", role);
-      navigate("/"); // Redirect to dashboard after login
+      navigate("/"); 
     } else {
       alert("Please fill in all fields");
     }
@@ -27,7 +27,6 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-      {/* Optional subtle animated background */}
       <div className="absolute w-full h-full bg-gradient-to-br from-cyan-800 via-slate-900 to-gray-900 opacity-10 blur-2xl z-0 animate-pulse" />
 
       {/* School Name Heading */}

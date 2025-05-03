@@ -38,15 +38,15 @@ const PerformanceByReligionCast = ({ year, grade }) => {
     : filteredData.reduce((acc, current) => {
         const existing = acc.find(item => item.name === current.name);
         if (existing) {
-          existing.avgMarks += current.avgMarks; // Accumulate avgMarks
+          existing.avgMarks += current.avgMarks; 
           existing.count += 1; // Count occurrences
         } else {
-          acc.push({ ...current, count: 1 }); // Initialize with count
+          acc.push({ ...current, count: 1 }); 
         }
         return acc;
       }, []).map(item => ({
         name: item.name,
-        avgMarks: item.avgMarks / item.count, // Calculate average
+        avgMarks: item.avgMarks / item.count, 
       }));
 
   const categories = aggregatedData.map((d) => d.name);

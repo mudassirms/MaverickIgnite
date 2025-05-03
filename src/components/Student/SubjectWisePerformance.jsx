@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-// Sample subject-wise performance data with year and grade
+// Sample subject-wise performance data 
 const subjectPerformanceData = [
   { name: "Math", marks: 90, year: "2025", grade: "Grade 10" },
   { name: "Science", marks: 50, year: "2025", grade: "Grade 10" },
@@ -10,7 +10,6 @@ const subjectPerformanceData = [
   { name: "History", marks: 69, year: "2025", grade: "Grade 10" },
   { name: "Geography", marks: 45, year: "2025", grade: "Grade 10" },
   { name: "Computer", marks: 88, year: "2025", grade: "Grade 10" },
-  // { name: "Computer", marks: 75, year: "2025", grade: "Grade 10" },
   
 ];
 
@@ -46,11 +45,11 @@ const SubjectWisePerformance = ({ year, grade }) => {
       gridLineColor: "#374151",
     },
     tooltip: {
-      backgroundColor: "#1F2937", // Tooltip background color
-      borderColor: "#4B5563", // Tooltip border color
-      style: { color: "#E5E7EB" }, // Tooltip text color
+      backgroundColor: "#1F2937", 
+      borderColor: "#4B5563", 
+      style: { color: "#E5E7EB" }, 
       formatter: function () {
-        return `<b>${this.point.category}</b>: ${this.y}%`; // this.point.category gives the subject name
+        return `<b>${this.point.category}</b>: ${this.y}%`; 
       },
     },
     series: [

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-// Sample top students data with year and grade
+// Sample top students data 
 const topStudentsData = [
   { name: "Abdullah", score: 96, year: "2025", grade: "Grade 10" },
   { name: "Amit", score: 80, year: "2025", grade: "Grade 10" },
@@ -44,7 +44,7 @@ const TopPerformingStudents = ({ year, grade }) => {
       style: { color: "#E5E7EB" },
     },
     xAxis: {
-      categories: filteredStudents.map((s) => s.name), // Student names are the categories
+      categories: filteredStudents.map((s) => s.name), 
       title: { text: null },
       labels: {
         style: { color: "#D1D5DB" },
@@ -67,8 +67,8 @@ const TopPerformingStudents = ({ year, grade }) => {
       borderRadius: 4, 
       padding: 10, 
       style: {
-        color: "#E5E7EB", // Text color for the tooltip
-        fontSize: "14px", // Ensuring text size is appropriate
+        color: "#E5E7EB", 
+        fontSize: "14px", 
       },
       formatter: function () {
         const studentName = this.point.category; 

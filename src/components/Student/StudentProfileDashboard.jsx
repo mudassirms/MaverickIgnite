@@ -954,7 +954,6 @@ const students = [
           <UserCheck className="w-7 h-7 text-white" />
           <h2>Individual Student Performance</h2>
         </div>
-  
         {/* Student Selector */}
         <div className="mb-4 max-w-xs">
           <Select
