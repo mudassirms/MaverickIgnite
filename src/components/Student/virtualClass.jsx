@@ -22,27 +22,28 @@ const VirtualClassGridHeatmap = ({ studentsData }) => {
   return (
     <div className="relative w-full">
       {/* Grid overlay */}
-      <div className="grid grid-cols-6 gap-2">
-        {gridData.slice(0, 30).map((student, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setHovered(index)}
-            onMouseLeave={() => setHovered(null)}
-            className={classNames(
-              "rounded-md shadow-md transition-all duration-300 w-full aspect-[1/1]",
-              student.score !== null ? getColorClass(student.score) : "bg-gray-700"
-            )}
-          >
-            {hovered === index && student.score !== null && (
-              <div className="absolute bg-white text-black text-sm p-2 rounded-md shadow-lg -translate-y-full z-10">
-                <strong>{student.name}</strong>
-                <br />
-                Score: {student.score}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+      <div className="grid grid-cols-6 gap-1">
+  {gridData.slice(0, 30).map((student, index) => (
+    <div
+      key={index}
+      onMouseEnter={() => setHovered(index)}
+      onMouseLeave={() => setHovered(null)}
+      className={classNames(
+        "w-[85px] h-[65px] rounded-sm transition-all duration-300",
+        student.score !== null ? getColorClass(student.score) : "bg-gray-700"
+      )}
+    >
+      {hovered === index && student.score !== null && (
+        <div className="absolute bg-white text-black text-xs p-1 rounded shadow -translate-y-full z-10">
+          <strong>{student.name}</strong>
+          <br />
+          Score: {student.score}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
 
       {/* Below Color Legends */}
       <div className="mt-4 flex flex-wrap justify-between text-sm text-white gap-2">
